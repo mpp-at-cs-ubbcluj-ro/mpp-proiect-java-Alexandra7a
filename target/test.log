@@ -1,0 +1,453 @@
+17 Mar 2024 00:51:15,365 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 00:51:15,370 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 00:51:15,370 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 00:51:15,370 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 00:51:15,371 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 00:51:15,371 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 00:51:15,674 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4722ef0c)
+17 Mar 2024 00:51:15,675 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 00:51:15,687 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 00:51:15,705 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 00:52:47,602 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 00:52:47,612 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 00:52:47,613 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 00:52:47,614 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 00:52:47,616 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 00:52:47,616 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 00:52:48,064 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a4927d6)
+17 Mar 2024 00:52:48,065 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 00:52:48,073 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 00:52:48,084 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 00:55:51,030 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 00:55:51,038 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 00:55:51,039 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 00:55:51,040 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 00:55:51,041 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 00:55:51,041 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 00:55:52,287 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 00:55:52,288 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 00:55:52,295 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 00:55:52,309 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 00:56:26,404 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 00:56:26,409 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 00:56:26,410 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 00:56:26,410 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 00:56:26,410 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 00:56:26,410 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 00:56:26,705 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 00:59:38,213 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 00:59:38,217 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 00:59:38,218 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 00:59:38,218 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 00:59:38,218 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 00:59:38,218 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 00:59:38,985 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:00:43,963 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:00:43,968 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:00:43,968 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:00:43,968 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:00:43,969 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:00:43,969 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:00:44,234 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 01:01:08,545 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:01:08,552 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:01:08,553 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:01:08,553 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:01:08,553 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:01:08,554 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:01:09,032 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:04:31,580 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:04:31,585 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:04:31,586 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:04:31,586 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:04:31,586 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:04:31,586 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:04:32,084 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:06:29,765 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:06:29,772 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:06:29,772 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:06:29,772 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:06:29,773 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:06:29,773 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:06:30,147 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:06:30,148 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:06:30,160 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:08:13,060 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:08:13,066 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:08:13,066 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:08:13,066 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:08:13,067 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:08:13,067 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:08:13,504 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:09:35,797 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:09:35,803 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:09:35,803 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:09:35,804 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:09:35,804 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:09:35,804 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:09:36,066 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:09:36,067 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:09:36,081 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:09:54,474 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:09:54,479 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:09:54,480 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:09:54,480 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:09:54,481 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:09:54,481 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:09:54,768 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:09:54,770 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:09:54,783 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:12:45,144 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:12:45,149 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:12:45,149 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:12:45,150 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:12:45,150 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:12:45,150 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:12:45,598 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:12:45,599 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:12:45,614 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:12:56,489 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:12:56,496 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:12:56,496 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:12:56,497 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:12:56,497 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:12:56,497 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:12:56,772 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:12:56,773 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:12:56,784 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:17:23,646 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:17:23,650 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:17:23,650 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:17:23,650 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:17:23,651 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:17:23,651 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:17:23,997 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5a5a729f)
+17 Mar 2024 01:17:23,998 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:17:24,011 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:18:42,768 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:18:42,777 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:18:42,777 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:18:42,778 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:18:42,778 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:18:42,779 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:18:43,166 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 01:18:43,167 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 01:18:43,180 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 01:27:34,986 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 01:27:34,994 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 01:27:34,994 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 01:27:34,995 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 01:27:34,995 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 01:27:34,996 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 01:27:35,910 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 09:55:13,495 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 09:55:13,499 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 09:55:13,500 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 09:55:13,500 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 09:55:13,500 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 09:55:13,500 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 09:55:14,077 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 09:56:03,898 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 09:56:03,902 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 09:56:03,903 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 09:56:03,903 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 09:56:03,903 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 09:56:03,903 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 09:56:04,140 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 09:59:56,607 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 09:59:56,612 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 09:59:56,612 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 09:59:56,612 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 09:59:56,613 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 09:59:56,613 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 09:59:56,996 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 10:04:59,493 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 10:04:59,498 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:04:59,498 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:04:59,498 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:04:59,498 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:04:59,499 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:04:59,790 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 10:08:11,210 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 10:08:11,216 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:08:11,217 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:08:11,217 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:08:11,218 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:08:11,218 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:08:11,504 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 10:08:11,505 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 10:08:11,518 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 10:09:34,623 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 10:09:34,628 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:09:34,628 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:09:34,628 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:09:34,629 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:09:34,629 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:09:34,839 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 10:09:34,839 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 10:09:34,845 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 10:09:34,852 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 10:09:34,861 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 10:09:34,862 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 10:44:27,549 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 10:44:27,553 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:44:27,553 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:44:27,553 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:44:27,554 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:44:27,554 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:44:28,051 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 10:44:28,052 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 10:44:28,052 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:44:28,052 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:44:28,052 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:44:28,053 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:44:28,053 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:44:28,054 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@65f8f5ae)
+17 Mar 2024 10:44:28,055 TRACE org.example.repository.ReservationDBRepository 39 save - Enter entry to save reservation
+17 Mar 2024 10:44:28,060 ERROR org.example.repository.ReservationDBRepository 56 save - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (table reservations has no column named id_employee)
+17 Mar 2024 10:44:28,061 TRACE org.example.repository.ReservationDBRepository 59 save - Exit with(NO reservation added)
+17 Mar 2024 10:45:15,322 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 10:45:15,326 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:45:15,326 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:45:15,327 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:45:15,327 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:45:15,327 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:45:15,537 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 10:45:15,538 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 10:45:15,538 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:45:15,539 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:45:15,539 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:45:15,540 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:45:15,540 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:45:15,541 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@65f8f5ae)
+17 Mar 2024 10:45:15,542 TRACE org.example.repository.ReservationDBRepository 39 save - Enter entry to save reservation
+17 Mar 2024 10:45:15,553 TRACE org.example.repository.ReservationDBRepository 51 save - Exit with(added reservation {}org.example.model.Reservation@97e93f1)
+17 Mar 2024 10:56:40,542 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 10:56:40,546 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:56:40,547 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:56:40,547 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:56:40,547 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:56:40,547 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:56:40,799 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 10:56:40,800 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 10:56:40,801 TRACE org.example.repository.DBConnection 53 getConnection - Enter
+17 Mar 2024 10:56:40,801 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 10:56:40,801 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 10:56:40,801 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 10:56:40,801 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 10:56:40,802 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@65f8f5ae)
+17 Mar 2024 10:56:40,803 TRACE org.example.repository.ReservationDBRepository 39 save - Enter entry to save reservation
+17 Mar 2024 10:56:40,808 ERROR org.example.repository.ReservationDBRepository 56 save - java.sql.SQLException: method cannot be called on a PreparedStatement
+17 Mar 2024 10:56:40,809 TRACE org.example.repository.ReservationDBRepository 59 save - Exit with(NO reservation added)
+17 Mar 2024 11:03:10,746 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 11:03:10,750 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 11:03:10,750 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 11:03:10,750 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 11:03:10,750 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 11:03:10,750 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 11:03:11,050 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@26abb146)
+17 Mar 2024 11:03:11,051 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 11:03:11,051 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 11:03:11,051 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 11:03:11,051 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 11:03:11,051 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 11:03:11,052 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 11:03:11,053 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@65f8f5ae)
+17 Mar 2024 11:03:11,054 TRACE org.example.repository.ReservationDBRepository 39 save - Enter entry to save reservation
+17 Mar 2024 11:03:11,066 TRACE org.example.repository.ReservationDBRepository 51 save - Exit with(added reservation {}org.example.model.Reservation@97e93f1)
+17 Mar 2024 11:14:50,635 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 11:14:50,640 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 11:14:50,642 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 11:14:50,642 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 11:14:50,642 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 11:14:50,642 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 11:14:50,999 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 11:14:51,000 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 11:14:51,007 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 11:14:51,014 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 11:14:51,024 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 11:14:51,025 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 11:23:09,010 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 11:23:09,016 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 11:23:09,016 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 11:23:09,017 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 11:23:09,017 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 11:23:09,017 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 11:23:09,250 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 11:23:09,251 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 11:23:09,258 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 11:23:09,266 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 11:23:09,278 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 11:23:09,280 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found1)
+17 Mar 2024 11:44:06,664 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 11:44:06,670 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 11:44:06,671 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 11:44:06,671 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 11:44:06,671 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 11:44:06,672 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 11:44:07,058 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 11:44:07,059 TRACE org.example.repository.TripDBRepository 65 findAll - Enter getting all trips entry
+17 Mar 2024 11:44:07,067 INFO  org.example.repository.TripDBRepository 70 findAll - suntem dupa resultset
+17 Mar 2024 11:57:28,274 INFO  org.example.repository.TripDBRepository 26 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 11:57:28,281 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 11:57:28,281 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 11:57:28,282 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 11:57:28,282 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 11:57:28,282 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 11:57:28,732 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 11:57:28,732 TRACE org.example.repository.TripDBRepository 62 findAll - Enter getting all trips entry
+17 Mar 2024 11:57:28,741 INFO  org.example.repository.TripDBRepository 67 findAll - suntem dupa resultset
+17 Mar 2024 12:02:04,444 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:02:04,448 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:02:04,448 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:02:04,448 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:02:04,448 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:02:04,449 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:02:04,708 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:02:04,710 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:02:04,717 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:02:04,730 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:02:04,747 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:02:04,751 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:21:36,319 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:21:36,324 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:21:36,324 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:21:36,325 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:21:36,325 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:21:36,325 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:21:36,584 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:21:36,584 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:21:36,592 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:21:36,601 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:21:36,611 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:21:36,614 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:22:07,667 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:22:07,671 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:22:07,671 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:22:07,672 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:22:07,672 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:22:07,672 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:22:07,869 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:22:07,869 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:22:07,875 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:22:07,885 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:22:07,895 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:22:07,898 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:22:39,737 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:22:39,741 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:22:39,741 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:22:39,741 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:22:39,741 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:22:39,742 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:22:39,950 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:22:39,951 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:22:39,957 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:22:39,968 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:22:39,982 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:22:39,986 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:22:39,987 TRACE org.example.repository.TripDBRepository 117 findAllTripPlaceTime - Enter entry the filter
+17 Mar 2024 12:22:39,988 TRACE org.example.repository.TripDBRepository 138 findAllTripPlaceTime - Exit with(Got all trips successfully)
+17 Mar 2024 12:24:08,845 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:24:08,849 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:24:08,850 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:24:08,850 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:24:08,850 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:24:08,850 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:24:09,058 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:24:09,058 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:24:09,064 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:25:12,166 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:25:12,170 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:25:12,170 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:25:12,170 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:25:12,171 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:25:12,171 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:25:12,375 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:25:12,376 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:25:12,383 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:25:12,392 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:25:12,403 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:25:12,407 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:25:12,407 TRACE org.example.repository.TripDBRepository 117 findAllTripPlaceTime - Enter entry the filter
+17 Mar 2024 12:25:12,409 TRACE org.example.repository.TripDBRepository 138 findAllTripPlaceTime - Exit with(Got all trips successfully)
+17 Mar 2024 12:25:35,187 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:25:35,191 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:25:35,192 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:25:35,192 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:25:35,192 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:25:35,192 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:25:35,394 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:25:35,395 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:25:35,401 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:25:35,411 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:25:35,422 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:25:35,425 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:25:35,426 TRACE org.example.repository.TripDBRepository 117 findAllTripPlaceTime - Enter entry the filter
+17 Mar 2024 12:25:35,427 TRACE org.example.repository.TripDBRepository 138 findAllTripPlaceTime - Exit with(Got all trips successfully)
+17 Mar 2024 12:29:38,399 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:29:38,404 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:29:38,405 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:29:38,405 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:29:38,405 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:29:38,405 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:29:38,651 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:29:38,652 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:29:38,659 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:29:38,670 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:29:38,678 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:29:38,682 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:29:38,682 TRACE org.example.repository.TripDBRepository 117 findAllTripPlaceTime - Enter entry the filter
+17 Mar 2024 12:29:38,683 TRACE org.example.repository.TripDBRepository 138 findAllTripPlaceTime - Exit with(Got all trips successfully)
+17 Mar 2024 12:29:38,685 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 12:29:38,685 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:29:38,685 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:29:38,685 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:29:38,686 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:29:38,686 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:29:38,687 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@14bdbc74)
+17 Mar 2024 12:29:38,688 TRACE org.example.repository.ReservationDBRepository 39 save - Enter entry to save reservation
+17 Mar 2024 12:29:38,696 TRACE org.example.repository.ReservationDBRepository 51 save - Exit with(added reservation {}org.example.model.Reservation@7dc19a70)
+17 Mar 2024 12:33:09,578 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 12:33:09,584 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:33:09,584 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:33:09,584 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:33:09,584 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:33:09,585 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:33:09,808 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 12:33:09,809 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 12:33:09,816 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 12:33:09,826 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 12:33:09,834 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}1
+17 Mar 2024 12:33:09,836 TRACE org.example.repository.TripDBRepository 58 findOne - Exit with(No trip found with id {}1)
+17 Mar 2024 12:33:09,837 TRACE org.example.repository.TripDBRepository 117 findAllTripPlaceTime - Enter entry the filter
+17 Mar 2024 12:33:09,838 TRACE org.example.repository.TripDBRepository 138 findAllTripPlaceTime - Exit with(Got all trips successfully)
+17 Mar 2024 12:33:09,840 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 12:33:09,840 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 12:33:09,840 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 12:33:09,840 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 12:33:09,841 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 12:33:09,841 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 12:33:09,842 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@14bdbc74)
+17 Mar 2024 12:33:09,843 TRACE org.example.repository.ReservationDBRepository 39 save - Enter entry to save reservation
+17 Mar 2024 12:33:09,851 TRACE org.example.repository.ReservationDBRepository 51 save - Exit with(added reservation {}org.example.model.Reservation@7dc19a70)
+17 Mar 2024 16:05:09,401 INFO  org.example.repository.TripDBRepository 28 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=} 
+17 Mar 2024 16:05:09,412 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 16:05:09,413 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 16:05:09,413 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 16:05:09,414 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 16:05:09,414 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 16:05:09,760 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@72c8e7b)
+17 Mar 2024 16:05:09,761 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
+17 Mar 2024 16:05:09,770 INFO  org.example.repository.TripDBRepository 69 findAll - suntem dupa resultset
+17 Mar 2024 16:05:09,787 TRACE org.example.repository.TripDBRepository 84 findAll - Exit with(Got all trips successfully)
+17 Mar 2024 16:05:09,803 TRACE org.example.repository.TripDBRepository 35 findOne - Enter Finding trip with id {}55
+17 Mar 2024 16:05:09,804 TRACE org.example.repository.TripDBRepository 49 findOne - Exit with(trip with id {} found55)
+17 Mar 2024 16:05:09,805 TRACE org.example.repository.TripDBRepository 117 findAllTripPlaceTime - Enter entry the filter
+17 Mar 2024 16:05:09,807 TRACE org.example.repository.TripDBRepository 138 findAllTripPlaceTime - Exit with(Got all trips successfully)
+17 Mar 2024 16:05:09,809 TRACE org.example.repository.ReservationDBRepository 21 <init> - Enter Constructor entry with properties {jdbc.user=, jdbc.url=jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db, jdbc.pass=}
+17 Mar 2024 16:05:09,810 TRACE org.example.repository.DBConnection 59 getConnection - Enter
+17 Mar 2024 16:05:09,811 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
+17 Mar 2024 16:05:09,811 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/Alexandra/IdeaProjects/allMPP/MPP-home-assignments/AgentieTurismMPP/agentieTurism.db
+17 Mar 2024 16:05:09,811 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
+17 Mar 2024 16:05:09,812 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
+17 Mar 2024 16:05:09,813 TRACE org.example.repository.DBConnection 68 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@d2de489)
