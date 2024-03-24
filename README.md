@@ -8,8 +8,7 @@
    <li> logarea in cont prin username si parola a angajatilor</li>
   <li> vizualizarea unui tabel ce contine excursiile</li>
   <li> filtrarea excursiilor si vizualizarea raspunsului in alt tabel</li>
-  <li> rezervarea de bilete(selectarea se poate face fie din tabelul mare, fie din tabelul filtrat, in functie de care este selectat)
-  </li>
+  <li> rezervarea de bilete(selectarea se poate face fie din tabelul mare, fie din tabelul filtrat, in functie de care este selectat)</li>
   <li> posibilitatea de refresh a paginii</li>
   <li> posibilitatea de log out</li>
 
