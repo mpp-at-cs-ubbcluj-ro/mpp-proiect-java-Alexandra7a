@@ -10,12 +10,17 @@ import java.util.Optional;
 import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.repository.interfaces.ReservationRepository;
 
-public class ReservationDBRepository implements Repository<Long, Reservation >{
+public class ReservationDBRepository implements ReservationRepository {
 
     private DBConnection dbConnection;
     private Connection connection;
     private static final Logger logger=LogManager.getLogger();
+
+
+    /**Preparing sttaement here...*/
+   // private PreparedStatement getAllById;
 
     public ReservationDBRepository(Properties properties) {
         logger.traceEntry("Constructor entry with properties {}",properties);
@@ -35,7 +40,7 @@ public class ReservationDBRepository implements Repository<Long, Reservation >{
 
     @Override
     public Optional<Reservation> save(Reservation entity) {
-        ///todo
+
         logger.traceEntry("entry to save reservation");
         try (PreparedStatement statement=connection.prepareStatement("insert into reservations(clientName, phoneNumber, noSeats, id_trip, username_employee, id_client) \n" +
                 "values (?,?,?,?,?,?)"))
@@ -43,9 +48,9 @@ public class ReservationDBRepository implements Repository<Long, Reservation >{
             statement.setString(1, entity.getClientName());
             statement.setString(2,entity.getPhoneNumber());
             statement.setInt(3,entity.getNoSeats());
-            statement.setInt(4,entity.getTrip());
-            statement.setString(5,entity.getResponsibleEmployee());
-            statement.setInt(6,entity.getClient());
+            statement.setLong(4,entity.getTrip().getId());
+            statement.setString(5,entity.getResponsibleEmployee().getUsername());
+            statement.setLong(6,entity.getClient().getId());
             int resultSet= statement.executeUpdate();
             if(resultSet !=0)
             {   logger.traceExit("added reservation {}"+entity);
@@ -73,5 +78,24 @@ public class ReservationDBRepository implements Repository<Long, Reservation >{
     @Override
     public int size() {
         return 0;
+    }
+
+    @Override
+    public int getAllReservationsAt(Long id) {
+        logger.traceEntry("Entered the getAllReservationsAt method ");
+        int result=0;
+        try (PreparedStatement statement=connection.prepareStatement("select sum(noSeats) from reservations group by id_trip having id_trip=?;"))
+        {
+            statement.setLong(1,id);
+            ResultSet resultSet= statement.executeQuery();
+            logger.trace("The result set gave: {}",resultSet);
+            result = resultSet.getInt(1);
+        }
+        catch (SQLException e)
+        {
+
+            System.out.println(e.getMessage());
+        }
+        return result;
     }
 }

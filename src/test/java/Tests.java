@@ -1,4 +1,4 @@
-import org.example.repository.Repository;
+import org.example.repository.interfaces.Repository;
 import org.example.repository.TripDBRepository;
 import org.junit.jupiter.api.Test;
 

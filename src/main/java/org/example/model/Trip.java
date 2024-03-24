@@ -1,6 +1,8 @@
 package org.example.model;
 
 
+import javafx.fxml.FXML;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

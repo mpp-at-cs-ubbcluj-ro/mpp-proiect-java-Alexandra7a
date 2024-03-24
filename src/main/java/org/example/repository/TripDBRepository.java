@@ -3,19 +3,19 @@ package org.example.repository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.model.Trip;
+import org.example.repository.interfaces.TripRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Properties;
 
-public class TripDBRepository implements TripRepository{
+public class TripDBRepository implements TripRepository {
     private Logger logger= LogManager.getLogger();
 
     private DBConnection dbConnection;
@@ -135,7 +135,7 @@ public class TripDBRepository implements TripRepository{
                     trip.setId(id);
                     filteredTrips.add(trip);
                 }
-                logger.traceExit("Got all trips successfully");
+                logger.traceExit("Got all FILTERED trips successfully");
             }
             catch (SQLException e)
             {

@@ -26,4 +26,9 @@ public class Client extends Entity<Long>{
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
+    @Override
+    public String toString()
+    {
+        return "id" + id + "Client: "+ name;
+    }
 }

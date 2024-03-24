@@ -4,11 +4,11 @@ public class Reservation extends Entity<Long>{
     private String clientName;
     private String phoneNumber;
     private int noSeats;
-    private int trip;
-    private String responsibleEmployee;
-    private int client;
+    private Trip trip;
+    private Employee responsibleEmployee;
+    private Client client;
 
-    public Reservation(String clientName, String phoneNumber, int noSeats, int trip, String responsibleEmployee, int client) {
+    public Reservation(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) {
         this.clientName = clientName;
         this.phoneNumber = phoneNumber;
         this.noSeats = noSeats;
@@ -41,27 +41,27 @@ public class Reservation extends Entity<Long>{
         this.noSeats = noSeats;
     }
 
-    public int getTrip() {
+    public Trip getTrip() {
         return trip;
     }
 
-    public void setTrip(int trip) {
+    public void setTrip(Trip trip) {
         this.trip = trip;
     }
 
-    public String getResponsibleEmployee() {
+    public Employee getResponsibleEmployee() {
         return responsibleEmployee;
     }
 
-    public void setResponsibleEmployee(String responsibleEmployee) {
+    public void setResponsibleEmployee(Employee responsibleEmployee) {
         this.responsibleEmployee = responsibleEmployee;
     }
 
-    public int getClient() {
+    public Client getClient() {
         return client;
     }
 
-    public void setClient(int client) {
+    public void setClient(Client client) {
         this.client = client;
     }
 }

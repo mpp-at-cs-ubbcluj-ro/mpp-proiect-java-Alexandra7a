@@ -1,38 +1,41 @@
 package org.example;
 
         import javafx.application.Application;
-        import javafx.event.EventHandler;
         import javafx.fxml.FXMLLoader;
         import javafx.scene.Scene;
         import javafx.scene.layout.Pane;
         import javafx.stage.Stage;
-        import javafx.stage.WindowEvent;
-        import org.example.controller.AgencyView;
+        import org.example.controller.LogInView;
+        import org.example.repository.*;
+        import org.example.repository.interfaces.ClientRepository;
+        import org.example.repository.interfaces.EmployeeRepository;
+        import org.example.repository.interfaces.ReservationRepository;
+        import org.example.repository.interfaces.TripRepository;
         import org.example.service.Service;
 
         import java.io.FileReader;
         import java.io.IOException;
         import java.util.Properties;
 
-public class SortingFXMain extends Application{
+public class MainFX extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("FXML TableView Example");
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("agency-view.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/log-in-view.fxml"));
         Pane myPane = (Pane) loader.load();
-        AgencyView ctrl=loader.getController();
+        LogInView ctrl=loader.getController();
 
-        ctrl.setService(getService());
+        ctrl.setService(primaryStage,getService());
         Scene myScene = new Scene(myPane);
         primaryStage.setScene(myScene);
 
 
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+       /* primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
                 //  System.out.println("Stage is closing");
                 ctrl.close();
             }
-        });
+        });*/
         primaryStage.show();
     }
 
@@ -43,7 +46,7 @@ public class SortingFXMain extends Application{
     static Service getService(){
         Properties serverProps=new Properties();
         try {
-            serverProps.load(new FileReader("bd.config"));
+            serverProps.load(new FileReader("db.config"));
             //System.setProperties(serverProps);
 
             System.out.println("Properties set. ");
@@ -53,10 +56,10 @@ public class SortingFXMain extends Application{
             System.out.println("Cannot find bd.config "+e);
             return null;
         }
-        SortingTaskJdbcRepository repo=new SortingTaskJdbcRepository(serverProps);//Repository(new SortingTaskValidator());
-        // SortingTaskRepository repo=new SortingTaskRepository(new SortingTaskValidator());
-        ObservableTaskRunner runner=new ObservableTaskRunner(new TaskStack());
-        TaskService service=new TaskService(repo,runner);
-        return service;
+        TripRepository tripRepository=new TripDBRepository(serverProps);
+        ReservationRepository reservationRepository=new ReservationDBRepository(serverProps);
+        EmployeeRepository employeeRepository=new EmployeeDBRepository(serverProps);
+        ClientRepository clientRepository=new ClientDBRepository(serverProps);
+        return new Service(tripRepository,reservationRepository,employeeRepository,clientRepository);
     }
 }

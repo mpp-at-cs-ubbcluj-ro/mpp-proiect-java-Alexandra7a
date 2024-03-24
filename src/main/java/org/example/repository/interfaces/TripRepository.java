@@ -1,10 +1,9 @@
-package org.example.repository;
+package org.example.repository.interfaces;
 
-import org.example.model.Entity;
 import org.example.model.Trip;
+import org.example.repository.interfaces.Repository;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public interface TripRepository extends Repository<Long,Trip> {
 
