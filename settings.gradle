@@ -1,2 +1,11 @@
 rootProject.name = 'AgentieTurismMPP'
+include 'AgencyServices'
+include 'AgencyModel'
+include 'AgencyClientFX'
+include 'AgencyNetworking'
+include 'AgencyServer'
+include 'AgencyPersistence'
+include 'AgentieTurism_'
+include 'AgentieTurism_:untitled'
+findProject(':AgentieTurism_:untitled')?.name = 'untitled'
 

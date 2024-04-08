@@ -1,70 +1,70 @@
-16 Mar 2024 21:30:37,101 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {} 
-16 Mar 2024 21:30:37,108 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:30:37,109 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:30:37,109 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... null
-16 Mar 2024 21:30:37,110 INFO  org.example.repository.DBConnection 30 getNewConnection - user: null
-16 Mar 2024 21:30:37,110 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: null
-16 Mar 2024 21:30:37,113 ERROR org.example.repository.DBConnection 43 getNewConnection - java.sql.SQLException: The url cannot be null
-16 Mar 2024 21:30:37,115 TRACE org.example.repository.DBConnection 62 getConnection - Exit
-16 Mar 2024 21:30:37,116 TRACE org.example.repository.TripDBRepository 63 findAll - Enter getting all trips entry
-16 Mar 2024 21:30:42,543 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {} 
-16 Mar 2024 21:30:42,550 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:30:42,551 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:30:42,551 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... null
-16 Mar 2024 21:30:42,552 INFO  org.example.repository.DBConnection 30 getNewConnection - user: null
-16 Mar 2024 21:30:42,553 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: null
-16 Mar 2024 21:30:42,558 ERROR org.example.repository.DBConnection 43 getNewConnection - java.sql.SQLException: The url cannot be null
-16 Mar 2024 21:30:42,560 TRACE org.example.repository.DBConnection 62 getConnection - Exit
-16 Mar 2024 21:30:42,561 TRACE org.example.repository.TripDBRepository 63 findAll - Enter getting all trips entry
-16 Mar 2024 21:32:05,523 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {} 
-16 Mar 2024 21:32:05,527 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:32:05,528 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:32:05,528 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... null
-16 Mar 2024 21:32:05,528 INFO  org.example.repository.DBConnection 30 getNewConnection - user: null
-16 Mar 2024 21:32:05,528 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: null
-16 Mar 2024 21:32:05,530 ERROR org.example.repository.DBConnection 43 getNewConnection - java.sql.SQLException: The url cannot be null
-16 Mar 2024 21:32:05,531 TRACE org.example.repository.DBConnection 62 getConnection - Exit
-16 Mar 2024 21:32:05,532 TRACE org.example.repository.TripDBRepository 63 findAll - Enter getting all trips entry
-16 Mar 2024 21:34:00,905 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=} 
-16 Mar 2024 21:34:00,912 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:34:00,912 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:34:00,912 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
-16 Mar 2024 21:34:00,913 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
-16 Mar 2024 21:34:00,913 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
-16 Mar 2024 21:34:01,503 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
-16 Mar 2024 21:34:01,504 TRACE org.example.repository.TripDBRepository 63 findAll - Enter getting all trips entry
-16 Mar 2024 21:34:01,507 ERROR org.example.repository.TripDBRepository 83 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
-16 Mar 2024 21:36:19,809 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=} 
-16 Mar 2024 21:36:19,813 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:36:19,813 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:36:19,814 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
-16 Mar 2024 21:36:19,814 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
-16 Mar 2024 21:36:19,814 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
-16 Mar 2024 21:36:20,174 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
-16 Mar 2024 21:36:20,175 TRACE org.example.repository.TripDBRepository 64 findAll - Enter getting all trips entry
-16 Mar 2024 21:36:20,182 ERROR org.example.repository.TripDBRepository 84 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
-16 Mar 2024 21:36:55,326 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=} 
-16 Mar 2024 21:36:55,331 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:36:55,331 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:36:55,332 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
-16 Mar 2024 21:36:55,332 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
-16 Mar 2024 21:36:55,332 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
-16 Mar 2024 21:36:55,565 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
-16 Mar 2024 21:36:55,566 TRACE org.example.repository.TripDBRepository 63 findAll - Enter getting all trips entry
-16 Mar 2024 21:36:55,572 ERROR org.example.repository.TripDBRepository 84 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
-16 Mar 2024 21:42:02,029 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=} 
-16 Mar 2024 21:42:02,037 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:42:02,037 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:42:02,038 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
-16 Mar 2024 21:42:02,038 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
-16 Mar 2024 21:42:02,038 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
-16 Mar 2024 21:42:02,639 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
-16 Mar 2024 21:42:02,640 TRACE org.example.repository.TripDBRepository 63 findAll - Enter getting all trips entry
-16 Mar 2024 21:42:02,646 ERROR org.example.repository.TripDBRepository 85 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
-16 Mar 2024 21:43:21,415 INFO  org.example.repository.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=} 
-16 Mar 2024 21:43:21,470 TRACE org.example.repository.DBConnection 53 getConnection - Enter
-16 Mar 2024 21:43:21,471 TRACE org.example.repository.DBConnection 24 getNewConnection - Enter
-16 Mar 2024 21:43:21,471 INFO  org.example.repository.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
-16 Mar 2024 21:43:21,471 INFO  org.example.repository.DBConnection 30 getNewConnection - user: 
-16 Mar 2024 21:43:21,471 INFO  org.example.repository.DBConnection 31 getNewConnection - pass: 
-16 Mar 2024 21:43:21,975 TRACE org.example.repository.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
+16 Mar 2024 21:30:37,101 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {}
+16 Mar 2024 21:30:37,108 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:30:37,109 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:30:37,109 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... null
+16 Mar 2024 21:30:37,110 INFO  org.example.DBConnection 30 getNewConnection - user: null
+16 Mar 2024 21:30:37,110 INFO  org.example.DBConnection 31 getNewConnection - pass: null
+16 Mar 2024 21:30:37,113 ERROR org.example.DBConnection 43 getNewConnection - java.sql.SQLException: The url cannot be null
+16 Mar 2024 21:30:37,115 TRACE org.example.DBConnection 62 getConnection - Exit
+16 Mar 2024 21:30:37,116 TRACE repository.agency.model.TripDBRepository 63 findAll - Enter getting all trips entry
+16 Mar 2024 21:30:42,543 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {}
+16 Mar 2024 21:30:42,550 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:30:42,551 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:30:42,551 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... null
+16 Mar 2024 21:30:42,552 INFO  org.example.DBConnection 30 getNewConnection - user: null
+16 Mar 2024 21:30:42,553 INFO  org.example.DBConnection 31 getNewConnection - pass: null
+16 Mar 2024 21:30:42,558 ERROR org.example.DBConnection 43 getNewConnection - java.sql.SQLException: The url cannot be null
+16 Mar 2024 21:30:42,560 TRACE org.example.DBConnection 62 getConnection - Exit
+16 Mar 2024 21:30:42,561 TRACE repository.agency.model.TripDBRepository 63 findAll - Enter getting all trips entry
+16 Mar 2024 21:32:05,523 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {}
+16 Mar 2024 21:32:05,527 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:32:05,528 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:32:05,528 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... null
+16 Mar 2024 21:32:05,528 INFO  org.example.DBConnection 30 getNewConnection - user: null
+16 Mar 2024 21:32:05,528 INFO  org.example.DBConnection 31 getNewConnection - pass: null
+16 Mar 2024 21:32:05,530 ERROR org.example.DBConnection 43 getNewConnection - java.sql.SQLException: The url cannot be null
+16 Mar 2024 21:32:05,531 TRACE org.example.DBConnection 62 getConnection - Exit
+16 Mar 2024 21:32:05,532 TRACE repository.agency.model.TripDBRepository 63 findAll - Enter getting all trips entry
+16 Mar 2024 21:34:00,905 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=}
+16 Mar 2024 21:34:00,912 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:34:00,912 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:34:00,912 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
+16 Mar 2024 21:34:00,913 INFO  org.example.DBConnection 30 getNewConnection - user:
+16 Mar 2024 21:34:00,913 INFO  org.example.DBConnection 31 getNewConnection - pass:
+16 Mar 2024 21:34:01,503 TRACE org.example.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
+16 Mar 2024 21:34:01,504 TRACE repository.agency.model.TripDBRepository 63 findAll - Enter getting all trips entry
+16 Mar 2024 21:34:01,507 ERROR repository.agency.model.TripDBRepository 83 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
+16 Mar 2024 21:36:19,809 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=}
+16 Mar 2024 21:36:19,813 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:36:19,813 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:36:19,814 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
+16 Mar 2024 21:36:19,814 INFO  org.example.DBConnection 30 getNewConnection - user:
+16 Mar 2024 21:36:19,814 INFO  org.example.DBConnection 31 getNewConnection - pass:
+16 Mar 2024 21:36:20,174 TRACE org.example.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
+16 Mar 2024 21:36:20,175 TRACE repository.agency.model.TripDBRepository 64 findAll - Enter getting all trips entry
+16 Mar 2024 21:36:20,182 ERROR repository.agency.model.TripDBRepository 84 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
+16 Mar 2024 21:36:55,326 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=}
+16 Mar 2024 21:36:55,331 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:36:55,331 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:36:55,332 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
+16 Mar 2024 21:36:55,332 INFO  org.example.DBConnection 30 getNewConnection - user:
+16 Mar 2024 21:36:55,332 INFO  org.example.DBConnection 31 getNewConnection - pass:
+16 Mar 2024 21:36:55,565 TRACE org.example.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
+16 Mar 2024 21:36:55,566 TRACE repository.agency.model.TripDBRepository 63 findAll - Enter getting all trips entry
+16 Mar 2024 21:36:55,572 ERROR repository.agency.model.TripDBRepository 84 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
+16 Mar 2024 21:42:02,029 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=}
+16 Mar 2024 21:42:02,037 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:42:02,037 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:42:02,038 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
+16 Mar 2024 21:42:02,038 INFO  org.example.DBConnection 30 getNewConnection - user:
+16 Mar 2024 21:42:02,038 INFO  org.example.DBConnection 31 getNewConnection - pass:
+16 Mar 2024 21:42:02,639 TRACE org.example.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
+16 Mar 2024 21:42:02,640 TRACE repository.agency.model.TripDBRepository 63 findAll - Enter getting all trips entry
+16 Mar 2024 21:42:02,646 ERROR repository.agency.model.TripDBRepository 85 findAll - org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: trips)
+16 Mar 2024 21:43:21,415 INFO  repository.agency.model.TripDBRepository 27 <init> - Initializing TripRepository with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db, jdbc.pass=}
+16 Mar 2024 21:43:21,470 TRACE org.example.DBConnection 53 getConnection - Enter
+16 Mar 2024 21:43:21,471 TRACE org.example.DBConnection 24 getNewConnection - Enter
+16 Mar 2024 21:43:21,471 INFO  org.example.DBConnection 29 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersAlexandraIdeaProjectsallMPPMPP-home-assignmentsAgentieTurismMPPagentieTurism.db
+16 Mar 2024 21:43:21,471 INFO  org.example.DBConnection 30 getNewConnection - user:
+16 Mar 2024 21:43:21,471 INFO  org.example.DBConnection 31 getNewConnection - pass:
+16 Mar 2024 21:43:21,975 TRACE org.example.DBConnection 62 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@431cd9b2)
