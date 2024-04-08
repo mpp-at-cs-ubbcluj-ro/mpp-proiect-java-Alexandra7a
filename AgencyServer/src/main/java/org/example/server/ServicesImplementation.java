@@ -14,12 +14,15 @@ import org.example.repository.interfaces.EmployeeRepository;
 import org.example.repository.interfaces.ReservationRepository;
 import org.example.repository.interfaces.TripRepository;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class ServicesImplementation implements ServiceInterface {
@@ -36,9 +39,17 @@ public class ServicesImplementation implements ServiceInterface {
         this.employeeRepository = repo3;
         this.clientRepository = repo4;
         loggedClients=new ConcurrentHashMap<>();
-
     }
+    private final int threadNumber=5;
+    private void notifyClients() throws AppException {
 
+        ExecutorService executorService = Executors.newFixedThreadPool(threadNumber);
+        for (var loggedClient : loggedClients.values()) {
+            if (loggedClient == null)
+                continue;
+            executorService.execute(loggedClient::reservationMade);
+        }
+    }
     public synchronized void logout(Employee user, ObserverInterface client) throws AppException {
         ObserverInterface localClient=loggedClients.remove(user.getUsername());
         if (localClient==null)
@@ -46,7 +57,36 @@ public class ServicesImplementation implements ServiceInterface {
         //notifyFriendsLoggedOut(user);
     }
 
+    @Override
+    public Iterable<ClientDTO> getAllClients() {
+        Iterable<Client> clients= clientRepository.findAll();
+        List<ClientDTO> clientDTO = new ArrayList<>();
+        for(Client client: clients) {
+            clientDTO.add(DTOUtils.getDTO(client));
+        }
+        return clientDTO;
+    }
+
+    @Override
+    public Optional<ReservationDTO> reserveTicket(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) throws AppException {
+        Reservation reservation=new Reservation(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
+        reservationRepository.save(reservation);
+        notifyClients();
+        return Optional.empty();
+    }
+
     private final int defaultThreadsNo=5;
+
+    @Override
+    public Iterable<TripDTO> findAllTripPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime) throws AppException {
+        Iterable<Trip> trips= tripRepository.findAllTripPlaceTime(placeToVisit,startTime,endTime);
+        List<TripDTO> tripsDTO = new ArrayList<>();
+        for(Trip trip: trips) {
+            tripsDTO.add(DTOUtils.getDTO(trip));
+        }
+        return tripsDTO;
+        //todo vezi cum sa transferi datele
+    }
 
     @Override
     public synchronized int getAllReservationsAt(Long id) throws AppException {

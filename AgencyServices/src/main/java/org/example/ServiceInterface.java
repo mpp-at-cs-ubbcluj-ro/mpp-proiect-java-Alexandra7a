@@ -13,20 +13,14 @@ import java.util.Optional;
 
 public interface ServiceInterface {
 
-/*
-    public Iterable<TripDTO> findAllTripPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime);
-
-    */
+    public Iterable<TripDTO> findAllTripPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime)throws AppException;
 
     public int getAllReservationsAt(Long id)throws AppException;
     public Iterable<TripDTO> getAllTrips() throws AppException;
     public Optional<Employee> findUser(String user, String pass,ObserverInterface client)throws AppException;
     public void logout(Employee employee,ObserverInterface client)throws AppException ;
-    /*
+    public Iterable<ClientDTO> getAllClients()throws AppException;
+    public Optional<ReservationDTO> reserveTicket(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client)throws AppException;
 
-
-    public Iterable<ClientDTO> getAllClients();
-    public Optional<ReservationDTO> reserveTicket(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client);
-*/
 
 }

@@ -10,7 +10,7 @@ public class AgencyRpcConcurrentServer extends AbsConcurrentServer {
     public AgencyRpcConcurrentServer(int port, ServiceInterface server) {
         super(port);
         this.server = server;
-        System.out.println("--- AgencyRpcConcurrentServer");
+        System.out.println("---AgencyRpcConcurrentServer");
     }
 
     @Override

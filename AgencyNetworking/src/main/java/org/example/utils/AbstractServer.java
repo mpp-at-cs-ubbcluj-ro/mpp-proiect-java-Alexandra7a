@@ -23,7 +23,8 @@ public abstract class AbstractServer {
             }
         } catch (IOException e) {
             throw new ServerException("Starting server errror ",e);
-        }finally {
+        }
+        finally {
             stop();
         }
     }

@@ -3,16 +3,17 @@ package org.example.rpcprotocol;
 import org.example.AppException;
 import org.example.ObserverInterface;
 import org.example.ServiceInterface;
+import org.example.model.Client;
+import org.example.model.Reservation;
 import org.example.model.Trip;
-import org.example.model.dto.DTOUtils;
-import org.example.model.dto.EmployeeDTO;
+import org.example.model.dto.*;
 import org.example.model.Employee;
-import org.example.model.dto.TripDTO;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -49,11 +50,7 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
         }
         try {
             input.close();
@@ -135,7 +132,6 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
              System.out.println("FindAllTripsRequest ...");
              try{
                  List<TripDTO> trips = (List<TripDTO>) server.getAllTrips();
-                 connected=false;
                  return new Response.Builder().type(ResponseType.OK).data(trips).build();
              }catch (AppException e){
                  return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
@@ -148,12 +144,56 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
              try{
                  long id= (long) request.data();
                  int no_reservation_at_hotel= server.getAllReservationsAt(id);
-                 connected=false;
                  return new Response.Builder().type(ResponseType.OK).data(no_reservation_at_hotel).build();
              }catch (AppException e){
                  return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
              }
          }
+        if(request.type()==RequestType.FIND_ALL_CLIENTS)
+        {
+            System.out.println("Find All Clients ...");
+            try{
+                List< ClientDTO> clients = (List<ClientDTO>) server.getAllClients();
+                return new Response.Builder().type(ResponseType.OK).data(clients).build();
+            }catch (AppException e){
+                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            }
+        }
+        if(request.type()==RequestType.FILTER_TRIPS)
+        {
+            System.out.println("Filter Trips here...");
+            try{
+                TripFilterBy data= (TripFilterBy) request.data();
+
+                String placeToVisit= data.getPlaceToVisit();;
+                LocalDateTime startTime=data.getStartTime();
+                LocalDateTime endTime=data.getEndTime();
+                List< TripDTO> clients = (List<TripDTO>) server.findAllTripPlaceTime(placeToVisit,startTime,endTime);
+                return new Response.Builder().type(ResponseType.OK).data(clients).build();
+            }catch (AppException e){
+                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            }
+        }
+
+        if(request.type()==RequestType.RESERVE_TICKET)
+        {
+            System.out.println("Reserve here...");
+            try{
+                ReservationDTO data= (ReservationDTO) request.data();
+
+                 String clientName= data.getClientName();
+                 String phoneNumber= data.getPhoneNumber();
+                 int noSeats= data.getNoSeats();
+                 Trip trip=data.getTrip();
+                 Employee responsibleEmployee=data.getResponsibleEmployee();
+                 Client client=data.getClient();
+
+                var var= server.reserveTicket(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
+                return new Response.Builder().type(ResponseType.OK).build();
+            }catch (AppException e){
+                return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            }
+        }
 
          /*return new ErrorResponse("Invalid request");
          }
@@ -184,26 +224,24 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
         return response;
     }
 
-    private void sendResponse(Response response) throws IOException{
+    private void sendResponse(Response response) {
         System.out.println("sending response "+response);
-        synchronized (output) {
-            output.writeObject(response);
-            output.flush();
+        try {
+
+            synchronized (output) {
+                output.writeObject(response);
+                output.flush();
+            }
+        }
+        catch (IOException e)00
+        {
+            e.printStackTrace();
         }
     }
 
     @Override
-    public void userLoggedIn() {
-
-    }
-
-    @Override
-    public void userLoggedOut() {
-
-    }
-
-    @Override
     public void reservationMade() {
-
+        Response respone=new Response.Builder().type(ResponseType.UPDATE).data(null).build();
+        sendResponse(respone);
     }
 }

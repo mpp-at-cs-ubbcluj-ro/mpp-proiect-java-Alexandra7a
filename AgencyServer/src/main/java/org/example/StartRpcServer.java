@@ -50,13 +50,15 @@ public class StartRpcServer {
         try {
             server.start();
         } catch (ServerException e) {
+            System.out.println("Ceva");
             System.err.println("Error starting the server" + e.getMessage());
-        }finally {
-            try {
-                server.stop();
-            }catch(ServerException e){
-                System.err.println("Error stopping server "+e.getMessage());
-            }
         }
+//        finally {
+//            try {
+//                server.stop();
+//            }catch(ServerException e){
+//                System.err.println("Error stopping server "+e.getMessage());
+//            }
+//        }
     }
 }

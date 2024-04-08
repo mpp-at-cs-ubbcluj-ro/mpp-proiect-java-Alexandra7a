@@ -1,16 +1,14 @@
 package org.example.rpcprotocol;
 
-import org.example.model.dto.DTOUtils;
+import org.example.model.dto.*;
 
 import org.example.AppException;
 import org.example.ObserverInterface;
 import org.example.ServiceInterface;
-import org.example.model.dto.EmployeeDTO;
 import org.example.model.Client;
 import org.example.model.Employee;
 import org.example.model.Reservation;
 import org.example.model.Trip;
-import org.example.model.dto.TripDTO;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -38,6 +36,22 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
         this.host = host;
         this.port = port;
         qresponses = new LinkedBlockingQueue<Response>();
+    }
+
+    @Override
+    public Iterable<TripDTO> findAllTripPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime) throws AppException {
+
+        Request req = new Request.Builder().type(RequestType.FILTER_TRIPS).data(new TripFilterBy(placeToVisit, startTime, endTime)).build();
+        sendRequest(req);
+        Response response = readResponse();
+        if(response.type()==ResponseType.OK){
+            return (Iterable<TripDTO>) response.data();
+        }
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            throw new AppException(err);
+        }
+        return null;
     }
 
     @Override
@@ -89,7 +103,6 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
         if (response.type().equals(ResponseType.ERROR)) {
             closeConnection();
             String err = response.data().toString();
-            closeConnection();
             throw new AppException(err);
         }
         return Optional.empty();
@@ -124,6 +137,38 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
             String err = response.data().toString();
             throw new AppException(err);
         }
+    }
+
+    @Override
+    public Iterable<ClientDTO> getAllClients() throws AppException {
+        Request req = new Request.Builder().type(RequestType.FIND_ALL_CLIENTS).build();
+        sendRequest(req);
+        Response response = readResponse();
+        if(response.type()==ResponseType.OK){
+            return (Iterable<ClientDTO>) response.data();
+        }
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            throw new AppException(err);
+        }
+        return null;
+    }
+
+    @Override
+    public Optional<ReservationDTO> reserveTicket(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) throws AppException {
+
+        ReservationDTO reservationDTO=new ReservationDTO(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
+        Request req = new Request.Builder().type(RequestType.RESERVE_TICKET).data(reservationDTO).build();
+        sendRequest(req);
+        Response response = readResponse();
+        if(response.type()==ResponseType.OK){
+            return Optional.of(reservationDTO);
+        }
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            throw new AppException(err);
+        }
+        return Optional.empty();
     }
 
 
@@ -177,10 +222,12 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
         tw.start();
     }
 
-    private void handleUpdate(Response response) {
+    private void handleUpdate(Response response) throws IOException {
 
-        if (response.type() == ResponseType.MODIFIED_lIST) {
+        if (response.type() == ResponseType.UPDATE) {
             //TODO: ce tip
+            System.out.println("Ceva acolo ceva");
+            client.reservationMade();
         }
        /* if (response.type()== ResponseType.FRIEND_LOGGED_IN){
 
@@ -217,7 +264,7 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
      * to treat the coming responses which were not requested(eg: a friend logged out, the list modified )
      */
     private boolean isUpdate(Response response) {
-        return response.type() == ResponseType.MODIFIED_lIST || response.type() == ResponseType.FRIEND_LOGGED_OUT || response.type() == ResponseType.FRIEND_LOGGED_IN || response.type() == ResponseType.NEW_MESSAGE;
+        return response.type() == ResponseType.UPDATE || response.type() == ResponseType.FRIEND_LOGGED_OUT || response.type() == ResponseType.FRIEND_LOGGED_IN || response.type() == ResponseType.NEW_MESSAGE;
     }
 
     private class ReaderThread implements Runnable {

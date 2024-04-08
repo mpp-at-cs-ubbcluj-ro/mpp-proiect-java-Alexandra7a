@@ -1,9 +1,10 @@
 package org.example;
 
 
-    public interface ObserverInterface {
-        void userLoggedIn();
-        void userLoggedOut();
-        void reservationMade();
+import java.io.IOException;
+
+public interface ObserverInterface {
+
+        void reservationMade() ;
     }
 
