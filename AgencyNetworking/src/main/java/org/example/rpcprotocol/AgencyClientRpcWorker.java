@@ -4,7 +4,6 @@ import org.example.AppException;
 import org.example.ObserverInterface;
 import org.example.ServiceInterface;
 import org.example.model.Client;
-import org.example.model.Reservation;
 import org.example.model.Trip;
 import org.example.model.dto.*;
 import org.example.model.Employee;
@@ -61,39 +60,6 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
         }
     }
 
-    /*public void messageReceived(Message message) throws ChatException {
-        MessageDTO mdto= DTOUtils.getDTO(message);
-        Response resp=new Response.Builder().type(ResponseType.NEW_MESSAGE).data(mdto).build();
-        System.out.println("Message received  "+message);
-        try {
-            sendResponse(resp);
-        } catch (IOException e) {
-            throw new ChatException("Sending error: "+e);
-        }
-    }
-
-    public void friendLoggedIn(User friend) throws ChatException {
-        UserDTO udto= DTOUtils.getDTO(friend);
-        Response resp=new Response.Builder().type(ResponseType.FRIEND_LOGGED_IN).data(udto).build();
-        System.out.println("Friend logged in "+friend);
-        try {
-            sendResponse(resp);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void friendLoggedOut(User friend) throws ChatException {
-        UserDTO udto= DTOUtils.getDTO(friend);
-        Response resp=new Response.Builder().type(ResponseType.FRIEND_LOGGED_OUT).data(udto).build();
-        System.out.println("Friend logged out "+friend);
-        try {
-            sendResponse(resp);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-*/
     private static Response okResponse=new Response.Builder().type(ResponseType.OK).build();
 
     private Response handleRequest(Request request){
@@ -168,8 +134,8 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
                 String placeToVisit= data.getPlaceToVisit();;
                 LocalDateTime startTime=data.getStartTime();
                 LocalDateTime endTime=data.getEndTime();
-                List< TripDTO> clients = (List<TripDTO>) server.findAllTripPlaceTime(placeToVisit,startTime,endTime);
-                return new Response.Builder().type(ResponseType.OK).data(clients).build();
+                List< TripDTO> trips = (List<TripDTO>) server.getAllFilteredTripsPlaceTime(placeToVisit,startTime,endTime);
+                return new Response.Builder().type(ResponseType.OK).data(trips).build();
             }catch (AppException e){
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
             }
@@ -188,7 +154,7 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
                  Employee responsibleEmployee=data.getResponsibleEmployee();
                  Client client=data.getClient();
 
-                var var= server.reserveTicket(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
+                var var= server.saveReservation(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
                 return new Response.Builder().type(ResponseType.OK).build();
             }catch (AppException e){
                 return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
@@ -233,7 +199,7 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
                 output.flush();
             }
         }
-        catch (IOException e)00
+        catch (IOException e)
         {
             e.printStackTrace();
         }

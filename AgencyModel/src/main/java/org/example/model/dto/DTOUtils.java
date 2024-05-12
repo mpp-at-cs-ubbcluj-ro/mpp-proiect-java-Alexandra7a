@@ -38,34 +38,4 @@ public class DTOUtils {
         clientDTO.setId(client.getId());
         return clientDTO;
     }
-
-   /* public static Message getFromDTO(MessageDTO mdto){
-        Employee sender=new Employee(mdto.getSenderId());
-        Employee receiver=new Employee(mdto.getReceiverId());
-        String text=mdto.getText();
-        return new Message(sender, text, receiver);
-
-    }
-
-    public static MessageDTO getDTO(Message message){
-        String senderId=message.getSender().getId();
-        String receiverId=message.getReceiver().getId();
-        String txt=message.getText();
-        return new MessageDTO(senderId, txt, receiverId);
-    }
-
-    public static UserDTO[] getDTO(User[] users){
-        UserDTO[] frDTO=new UserDTO[users.length];
-        for(int i=0;i<users.length;i++)
-            frDTO[i]=getDTO(users[i]);
-        return frDTO;
-    }
-
-    public static User[] getFromDTO(UserDTO[] users){
-        User[] friends=new User[users.length];
-        for(int i=0;i<users.length;i++){
-            friends[i]=getFromDTO(users[i]);
-        }
-        return friends;
-    }*/
 }

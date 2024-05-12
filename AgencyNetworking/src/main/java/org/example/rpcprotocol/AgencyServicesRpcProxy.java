@@ -9,10 +9,11 @@ import org.example.model.Client;
 import org.example.model.Employee;
 import org.example.model.Reservation;
 import org.example.model.Trip;
+import org.example.protobuffprotocol.AgencyProtocol;
+import org.example.protobuffprotocol.AgencyServiceProtoProxy;
+import org.example.protobuffprotocol.ProtoUtils;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -39,12 +40,12 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
     }
 
     @Override
-    public Iterable<TripDTO> findAllTripPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime) throws AppException {
+    public Iterable<TripDTO> getAllFilteredTripsPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime) throws AppException {
 
         Request req = new Request.Builder().type(RequestType.FILTER_TRIPS).data(new TripFilterBy(placeToVisit, startTime, endTime)).build();
         sendRequest(req);
         Response response = readResponse();
-        if(response.type()==ResponseType.OK){
+        if(response.type()== ResponseType.OK){
             return (Iterable<TripDTO>) response.data();
         }
         if (response.type() == ResponseType.ERROR) {
@@ -155,7 +156,7 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
     }
 
     @Override
-    public Optional<ReservationDTO> reserveTicket(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) throws AppException {
+    public Optional<ReservationDTO> saveReservation(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) throws AppException {
 
         ReservationDTO reservationDTO=new ReservationDTO(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
         Request req = new Request.Builder().type(RequestType.RESERVE_TICKET).data(reservationDTO).build();
@@ -218,7 +219,7 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
     }
 
     private void startReader() {
-        Thread tw = new Thread(new ReaderThread());
+        Thread tw = new Thread(new AgencyServicesRpcProxy.ReaderThread());
         tw.start();
     }
 
@@ -264,9 +265,8 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
      * to treat the coming responses which were not requested(eg: a friend logged out, the list modified )
      */
     private boolean isUpdate(Response response) {
-        return response.type() == ResponseType.UPDATE || response.type() == ResponseType.FRIEND_LOGGED_OUT || response.type() == ResponseType.FRIEND_LOGGED_IN || response.type() == ResponseType.NEW_MESSAGE;
+        return response.type() == ResponseType.UPDATE;
     }
-
     private class ReaderThread implements Runnable {
         public void run() {
             while (!finished) {

@@ -68,7 +68,7 @@ public class ServicesImplementation implements ServiceInterface {
     }
 
     @Override
-    public Optional<ReservationDTO> reserveTicket(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) throws AppException {
+    public Optional<ReservationDTO> saveReservation(String clientName, String phoneNumber, int noSeats, Trip trip, Employee responsibleEmployee, Client client) throws AppException {
         Reservation reservation=new Reservation(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
         reservationRepository.save(reservation);
         notifyClients();
@@ -78,7 +78,7 @@ public class ServicesImplementation implements ServiceInterface {
     private final int defaultThreadsNo=5;
 
     @Override
-    public Iterable<TripDTO> findAllTripPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime) throws AppException {
+    public Iterable<TripDTO> getAllFilteredTripsPlaceTime(String placeToVisit, LocalDateTime startTime, LocalDateTime endTime) throws AppException {
         Iterable<Trip> trips= tripRepository.findAllTripPlaceTime(placeToVisit,startTime,endTime);
         List<TripDTO> tripsDTO = new ArrayList<>();
         for(Trip trip: trips) {

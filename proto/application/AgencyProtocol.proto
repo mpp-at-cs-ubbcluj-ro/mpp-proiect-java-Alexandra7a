@@ -1,0 +1,92 @@
+syntax="proto3";
+package proto;
+
+option java_package = "org.example.protobuffprotocol";
+option java_outer_classname = "AgencyProtocol";
+
+/**
+this is what we are meant to sent between client and server*/
+
+message EmployeeDTO{
+  string username=1;
+  string password=2;
+}
+message TripFilterBy{
+  string placeToVisit =1;
+  string startTime=2;
+  string endTime=3;
+
+}
+message TripDTO{
+  int64  id=1;
+  string  place=2;
+  string transportCompanyName=3;
+  string departure=4;
+  float price=5;
+  int32 totalSeats=6;
+}
+message ClientDTO{
+  int64 id=1;
+  string name=2;
+  string birthDate=3;
+}
+
+message Employee {
+  string username=1;
+  string password=2;
+}
+message Trip{
+  string place=1;
+  string transportCompanyName=2;
+  string departure=3;
+  float price=4;
+  int32 totalSeats=5;
+}
+message Client{
+  string name=1;
+  string birthdate=2;
+}
+message ReservationDTO{
+  string  clientName=1;
+  string phoneNumber=2;
+  int32 noSeats=3;
+  Trip trip=4;
+  Employee responsibleEmployee=5;
+  Client client=6;
+}
+
+
+message Request {
+  enum RequestType {
+    LOGIN = 0;
+    LOGOUT = 1;
+    FIND_ALL_TRIPS = 2;
+    GET_RESERVATIONS = 3;
+    FIND_ALL_CLIENTS = 4;
+    FILTER_TRIPS = 5;
+    RESERVE_TICKET=6;
+  }
+  RequestType type = 1;
+  oneof data{
+    TripFilterBy tripFilterByDataRequest=2;
+    int64 id=3;
+    EmployeeDTO userDto = 4;
+    ReservationDTO reservationDto = 5;
+    Employee employee=6;
+  }
+}
+
+message Response {
+  enum ReponseType{
+    OK = 0;
+    ERROR = 1;
+    GET_TRIPS = 2;//not used
+    GET_TRIPS_FILTERED = 3;//not used
+    UPDATE = 4;
+  }
+  ReponseType type = 1;
+  string error = 2;
+  repeated ClientDTO clients=3;
+  repeated TripDTO trips=4;
+  int32 no=5;
+}

@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.example.AppException;
@@ -12,21 +11,14 @@ import org.example.ObserverInterface;
 import org.example.ServiceInterface;
 import org.example.model.Client;
 import org.example.model.Employee;
-import org.example.model.Reservation;
 import org.example.model.Trip;
 import org.example.model.dto.ClientDTO;
 import org.example.model.dto.DTOUtils;
-import org.example.model.dto.ReservationDTO;
 import org.example.model.dto.TripDTO;
 
-import javax.swing.text.Utilities;
-import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Optional;
-import java.util.ResourceBundle;
-import java.util.ServiceLoader;
 
 public class AgencyView implements ObserverInterface {
 
@@ -140,7 +132,7 @@ public class AgencyView implements ObserverInterface {
             if (placeToVisit.isEmpty())
                 throw new AppException("Empty field");
             tableTripFiltered.getItems().clear();
-            for (TripDTO tripDTO : service.findAllTripPlaceTime(placeToVisit, startTime, endTime)) {
+            for (TripDTO tripDTO : service.getAllFilteredTripsPlaceTime(placeToVisit, startTime, endTime)) {
                 int availableSeats = tripDTO.getTotalSeats() - service.getAllReservationsAt(tripDTO.getId());
                 tripDTO.setTotalSeats(availableSeats);
                 Trip trip=new Trip(tripDTO.getPlace(),tripDTO.getTransportCompanyName(),tripDTO.getDeparture(),tripDTO.getPrice(),tripDTO.getTotalSeats());
@@ -169,31 +161,6 @@ public class AgencyView implements ObserverInterface {
         }
     }
 
-
-    public void execButton(ActionEvent actionEvent) {
-    }
-
-    public void cancelExecButton(ActionEvent actionEvent) {
-    }
-
-    public void addButton(ActionEvent actionEvent) {
-    }
-
-    public void deleteButton(ActionEvent actionEvent) {
-    }
-
-    public void updateButton(ActionEvent actionEvent) {
-    }
-
-    public void cancelButton(ActionEvent actionEvent) {
-    }
-
-    public void handleAddTaskRunner(ActionEvent actionEvent) {
-    }
-
-    public void handleExecuteOne(ActionEvent actionEvent) {
-    }
-
     public void handleExecuteALL(ActionEvent actionEvent) {
     }
     @FXML
@@ -204,7 +171,6 @@ public class AgencyView implements ObserverInterface {
         hour1Combo.setItems(FXCollections.observableList(list));
         hour2Combo.setItems(FXCollections.observableList(list));
         System.out.println(hour1Combo.getValue());
-
     }
 
     public void onReserveButtonClicked(ActionEvent actionEvent) {
@@ -226,9 +192,8 @@ public class AgencyView implements ObserverInterface {
 //        System.out.println(trip.getId());
 //        System.out.println(client.toString());
         try {
-            service.reserveTicket(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
+            service.saveReservation(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
             MessageAlert.showMessage(primaryStage, Alert.AlertType.INFORMATION,"Info","Successful reservation...");
-//            loadData();
         }
         catch (Exception e)
         {
