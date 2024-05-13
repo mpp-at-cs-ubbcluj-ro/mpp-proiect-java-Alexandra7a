@@ -737,7 +737,7 @@ public final class AgencyProtocol {
         /* major= */ 4,
         /* minor= */ 27,
         /* patch= */ 0,
-        /* suffix= */ "",
+        /* suffix= */ "-rc2",
         TripFilterBy.class.getName());
     }
     // Use TripFilterBy.newBuilder() to construct.

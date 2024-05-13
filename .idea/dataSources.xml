@@ -30,11 +30,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="agentieTurism.db [2]" uuid="acca1830-a051-4f5d-9bcd-6b7f96cda804">
+    <data-source source="LOCAL" name="agentieTurismCSharp.db [2]" uuid="af195fe6-1c50-4488-b2f6-c9fa72197adb">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Alexandra\source\MPP\MPPcSharp\AgencyServer\db\agentieTurism.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/source/MPP/MPPcSharp/AgencyServer/db/agentieTurism.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

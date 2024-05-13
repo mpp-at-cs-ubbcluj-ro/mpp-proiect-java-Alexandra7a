@@ -28,5 +28,5 @@ test {
     useJUnitPlatform()
 }
 application {
-    mainClass='org.example.StartProtobuffClient'
+    mainClass='org.example.StartRpcClientFX'
 }

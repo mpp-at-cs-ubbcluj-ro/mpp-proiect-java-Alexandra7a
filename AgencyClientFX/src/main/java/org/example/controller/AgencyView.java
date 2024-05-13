@@ -16,8 +16,10 @@ import org.example.model.dto.ClientDTO;
 import org.example.model.dto.DTOUtils;
 import org.example.model.dto.TripDTO;
 
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class AgencyView implements ObserverInterface {
@@ -93,7 +95,7 @@ public class AgencyView implements ObserverInterface {
             }
         });
     }
-
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private void loadData() {
         try {
             tableTrip.getItems().clear();
@@ -101,6 +103,7 @@ public class AgencyView implements ObserverInterface {
                 int availableSeats=trip.getTotalSeats()-service.getAllReservationsAt(trip.getId());
                 trip.setTotalSeats(availableSeats);
                 Trip tripN= DTOUtils.getFromDTO(trip);
+                tripN.setDeparture(LocalDateTime.parse(tripN.getDeparture().toString(),formatter));
                 tableTrip.getItems().add(tripN);
             }
         }

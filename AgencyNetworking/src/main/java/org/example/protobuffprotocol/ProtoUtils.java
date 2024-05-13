@@ -8,9 +8,12 @@ import org.example.model.dto.TripFilterBy;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ProtoUtils {
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
     public static AgencyProtocol.Request createLoginRequest(EmployeeDTO employee1) {
         AgencyProtocol.EmployeeDTO utilizator = AgencyProtocol.EmployeeDTO.newBuilder().setUsername(employee1.getUsername()).setPassword(employee1.getPassword()).build();
         AgencyProtocol.Request request = AgencyProtocol.Request.newBuilder().setType(AgencyProtocol.Request.RequestType.LOGIN).setUserDto(utilizator).build();
@@ -141,16 +144,21 @@ public class ProtoUtils {
  * to be able to extract the data from a response or a request
  * */
     public static List<TripDTO> getTripsFromResponse(AgencyProtocol.Response response){
+
         var trips = response.getTripsList();
-        return trips.stream()
+        List<TripDTO> tripsT = trips.stream()
                 .map(trip -> {var newTrip =new TripDTO( trip.getPlace(),
                         trip.getTransportCompanyName(),
-                        LocalDateTime.parse(trip.getDeparture()),
+                        LocalDateTime.parse(trip.getDeparture(),formatter),
                         trip.getPrice(),
                         trip.getTotalSeats());
                         newTrip.setId(trip.getId());
                 return newTrip;})
                 .toList();
+
+        System.out.println("IN CLIENT A AJUNS:::______________________");
+        tripsT.forEach(System.out::println);
+        return tripsT;
     }
     public static List<ClientDTO> getClientsFromResponse(AgencyProtocol.Response response){
         var clients = response.getClientsList();

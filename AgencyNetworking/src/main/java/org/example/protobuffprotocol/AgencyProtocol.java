@@ -67,7 +67,7 @@ public final class AgencyProtocol {
               /* major= */ 4,
               /* minor= */ 27,
               /* patch= */ 0,
-              /* suffix= */ "",
+              /* suffix= */ "-rc2",
               EmployeeDTO.class.getName());
     }
     // Use EmployeeDTO.newBuilder() to construct.
