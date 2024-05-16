@@ -3,7 +3,7 @@ package org.example.model;
 
 import java.time.LocalDateTime;
 
-public class Trip extends Entity<Long>{
+public class Trip extends Entityy<Long> {
     private String place;
     private String transportCompanyName;
     private LocalDateTime departure;

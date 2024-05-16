@@ -1,7 +1,5 @@
 package org.example.model.dto;
 
-import org.example.model.Entity;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 

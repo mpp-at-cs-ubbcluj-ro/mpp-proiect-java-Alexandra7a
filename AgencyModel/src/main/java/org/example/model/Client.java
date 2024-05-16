@@ -1,9 +1,17 @@
 package org.example.model;
 
 import java.time.LocalDate;
+import javax.persistence.*;
+@Entity
+@Table(name="clients")
+@AttributeOverrides({
+        @AttributeOverride(name="id", column = @Column(name="id_client"))
+})
+public class Client extends Entityy {
 
-public class Client extends Entity<Long> {
+    @Column (name="username")
     private String name;
+    @Column(name="birthDay")
     private LocalDate birthDate;
 
     public Client(String name, LocalDate birthDate) {

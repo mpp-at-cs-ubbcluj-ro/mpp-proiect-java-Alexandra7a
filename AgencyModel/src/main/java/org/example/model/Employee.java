@@ -1,7 +1,15 @@
 package org.example.model;
 
-public class Employee extends Entity<Long> {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+//@Entity
+//@Table (name="employees")
+public class Employee extends Entityy {
+    @Column (name = "username")
     private String username;
+    @Column (name="password")
     private String password;
 
     public Employee(String username, String password) {

@@ -233,7 +233,7 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
                 output.flush();
             }
         }
-        catch (IOException e)00
+        catch (IOException e)
         {
             e.printStackTrace();
         }
