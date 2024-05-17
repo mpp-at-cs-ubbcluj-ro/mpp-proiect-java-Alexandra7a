@@ -118,6 +118,7 @@ public class AgencyView implements ObserverInterface {
         }
     }
     private void loadClientsData() {
+        System.out.println("IN CLIENTI");
         try {
             clientList.getItems().clear();
             for (ClientDTO client : service.getAllClients()) {

@@ -59,6 +59,8 @@ public class ServicesImplementation implements ServiceInterface {
 
     @Override
     public Iterable<ClientDTO> getAllClients() {
+        System.out.println("IN CLIENTI SERVICE");
+
         Iterable<Client> clients= clientRepository.findAll();
         List<ClientDTO> clientDTO = new ArrayList<>();
         for(Client client: clients) {
@@ -85,7 +87,6 @@ public class ServicesImplementation implements ServiceInterface {
             tripsDTO.add(DTOUtils.getDTO(trip));
         }
         return tripsDTO;
-        //todo vezi cum sa transferi datele
     }
 
     @Override

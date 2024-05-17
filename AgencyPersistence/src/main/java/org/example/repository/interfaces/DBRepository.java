@@ -1,7 +1,7 @@
 package org.example.repository.interfaces;
 
-import org.example.model.Entityy;
+import org.example.model.Entitate;
 
-public interface DBRepository<ID,E extends Entityy<ID>> extends Repository<ID,E>
+public interface DBRepository<ID,E extends Entitate> extends Repository<ID,E>
 {
 }

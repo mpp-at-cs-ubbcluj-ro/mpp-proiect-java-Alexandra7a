@@ -151,6 +151,7 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
          }
         if(request.type()==RequestType.FIND_ALL_CLIENTS)
         {
+
             System.out.println("Find All Clients ...");
             try{
                 List< ClientDTO> clients = (List<ClientDTO>) server.getAllClients();

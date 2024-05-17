@@ -1,6 +1,6 @@
 package org.example.model;
 
-public class Reservation extends Entityy<Long> {
+public class Reservation extends Entitate {
     private String clientName;
     private String phoneNumber;
     private int noSeats;

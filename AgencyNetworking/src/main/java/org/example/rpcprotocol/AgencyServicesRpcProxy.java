@@ -141,6 +141,8 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
 
     @Override
     public Iterable<ClientDTO> getAllClients() throws AppException {
+        System.out.println("IN CLIENTI PROXY");
+
         Request req = new Request.Builder().type(RequestType.FIND_ALL_CLIENTS).build();
         sendRequest(req);
         Response response = readResponse();

@@ -1,20 +1,27 @@
 package org.example.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-//@Entity
-//@Table (name="employees")
-public class Employee extends Entityy {
-    @Column (name = "username")
+@Entity
+@Table(name="employees")
+public class Employee extends Entitate {
+
+    @Id
+    @Column (name = "username",unique = true)
     private String username;
-    @Column (name="password")
+    @Column(name="pass")
     private String password;
 
     public Employee(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public Employee() {
+
     }
 
     public String getUsername() {

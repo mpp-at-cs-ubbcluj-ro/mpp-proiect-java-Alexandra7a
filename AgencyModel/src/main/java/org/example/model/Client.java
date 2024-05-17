@@ -1,13 +1,18 @@
 package org.example.model;
 
+import jakarta.persistence.*;
+
+import java.io.Serializable;
 import java.time.LocalDate;
-import javax.persistence.*;
+
 @Entity
-@Table(name="clients")
 @AttributeOverrides({
         @AttributeOverride(name="id", column = @Column(name="id_client"))
 })
-public class Client extends Entityy {
+
+@Table(name="clients")
+
+public class Client extends Entitate implements Serializable {
 
     @Column (name="username")
     private String name;
@@ -17,6 +22,10 @@ public class Client extends Entityy {
     public Client(String name, LocalDate birthDate) {
         this.name = name;
         this.birthDate = birthDate;
+    }
+
+    public Client() {
+
     }
 
     public String getName() {
@@ -37,6 +46,6 @@ public class Client extends Entityy {
     @Override
     public String toString()
     {
-        return "id" + id + "Client: "+ name;
+        return  "Client: "+ name;
     }
 }
