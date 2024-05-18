@@ -9,10 +9,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Formatter;
 import java.util.List;
 
 public class ProtoUtils {
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     public static AgencyProtocol.Request createLoginRequest(EmployeeDTO employee1) {
         AgencyProtocol.EmployeeDTO utilizator = AgencyProtocol.EmployeeDTO.newBuilder().setUsername(employee1.getUsername()).setPassword(employee1.getPassword()).build();
@@ -43,14 +43,17 @@ public class ProtoUtils {
 
     public static AgencyProtocol.Request createReservationTicketRequest(ReservationDTO reservationDTO){
         AgencyProtocol.Employee employee=AgencyProtocol.Employee.newBuilder().setUsername(reservationDTO.getResponsibleEmployee().getUsername()).setPassword(reservationDTO.getResponsibleEmployee().getPassword()).build();
-        AgencyProtocol.Client client=AgencyProtocol.Client.newBuilder().setName(reservationDTO.getClient().getName()).setBirthdate(reservationDTO.getClient().getBirthDate().toString()).build();
+        AgencyProtocol.Client client=AgencyProtocol.Client.newBuilder().setId(reservationDTO.getClient().getId()).setName(reservationDTO.getClient().getName()).setBirthdate(reservationDTO.getClient().getBirthDate().toString()).build();
         AgencyProtocol.Trip trip=AgencyProtocol.Trip.newBuilder()
+                .setId(reservationDTO.getTrip().getId())
                 .setPlace(reservationDTO.getTrip().getPlace())
                 .setTransportCompanyName(reservationDTO.getTrip().getTransportCompanyName())
                 .setDeparture(reservationDTO.getTrip().getDeparture().toString())
                 .setPrice(reservationDTO.getTrip().getPrice())
                 .setTotalSeats(reservationDTO.getTrip().getTotalSeats()).build();
-
+        System.out.println("PRoto utils save reservation");
+        System.out.println(trip);
+        System.out.println(client);
         AgencyProtocol.ReservationDTO reservation = AgencyProtocol.ReservationDTO.newBuilder()
                 .setClientName(reservationDTO.getClientName())
                 .setPhoneNumber(reservationDTO.getPhoneNumber())
@@ -140,9 +143,12 @@ public class ProtoUtils {
         AgencyProtocol.Response response= AgencyProtocol.Response.newBuilder().setType(AgencyProtocol.Response.ReponseType.OK).setNo(number).build();
         return response;
     }
-/**
- * to be able to extract the data from a response or a request
- * */
+    /**
+     * to be able to extract the data from a response or a request
+     * */
+
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy h:mm:ss a");
+
     public static List<TripDTO> getTripsFromResponse(AgencyProtocol.Response response){
 
         var trips = response.getTripsList();
@@ -152,8 +158,8 @@ public class ProtoUtils {
                         LocalDateTime.parse(trip.getDeparture(),formatter),
                         trip.getPrice(),
                         trip.getTotalSeats());
-                        newTrip.setId(trip.getId());
-                return newTrip;})
+                    newTrip.setId(trip.getId());
+                    return newTrip;})
                 .toList();
 
         System.out.println("IN CLIENT A AJUNS:::______________________");
@@ -164,7 +170,7 @@ public class ProtoUtils {
         var clients = response.getClientsList();
         return clients.stream()
                 .map(client -> {var newClient =new ClientDTO( client.getName(),
-                        LocalDate.parse(client.getBirthDate()));
+                        LocalDate.parse(client.getBirthDate(),formatter));
                     newClient.setId(client.getId());
                     return newClient;})
                 .toList();
@@ -197,7 +203,7 @@ public class ProtoUtils {
                 LocalDateTime.parse(reservationDTO.getTrip().getDeparture()),
                 reservationDTO.getTrip().getPrice(),
                 reservationDTO.getTrip().getTotalSeats()
-                );
+        );
         Client client=new Client(reservationDTO.getClient().getName(),LocalDate.parse(reservationDTO.getClient().getBirthdate()));
 
         return new ReservationDTO(reservationDTO.getClientName(),

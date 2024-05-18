@@ -95,7 +95,9 @@ public class AgencyView implements ObserverInterface {
             }
         });
     }
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+    //private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy h:mm:ss a");
+
     private void loadData() {
         try {
             tableTrip.getItems().clear();
@@ -111,20 +113,21 @@ public class AgencyView implements ObserverInterface {
         {
             MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Something went wrong",e.getMessage());
         }
+        System.out.println("GATA CU TRIPS");
     }
     private void loadClientsData() {
+        System.out.println("LUAM TOTI CLIENTII ACUM");
         try {
             clientList.getItems().clear();
             for (ClientDTO client : service.getAllClients()) {
-                //todo transform clientDTO to client
                 Client clientN=new Client(client.getName(),client.getBirthDate());
                 clientN.setId(client.getId());
                 clientList.getItems().add(clientN);
             }
         }catch (AppException e)
-            {
-                MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Something went wrong",e.getMessage());
-            }
+        {
+            MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Something went wrong",e.getMessage());
+        }
     }
 
 
@@ -142,13 +145,13 @@ public class AgencyView implements ObserverInterface {
                 tableTripFiltered.getItems().add(trip);
             }
         }catch(AppException e)
-            {
-                MessageAlert.showMessage(null, Alert.AlertType.ERROR, "Something went wrong", e.getMessage());
-            }
+        {
+            MessageAlert.showMessage(null, Alert.AlertType.ERROR, "Something went wrong", e.getMessage());
+        }
     }
 
-   public void tripFilterButton(ActionEvent actionEvent) {
-         try
+    public void tripFilterButton(ActionEvent actionEvent) {
+        try
         {
             String place=placeField.getText();
             LocalDate dateStart=dateStartPicker.getValue();
@@ -168,7 +171,7 @@ public class AgencyView implements ObserverInterface {
     }
     @FXML
     public void initialize(){
-       ArrayList<Integer> list=new ArrayList<>();
+        ArrayList<Integer> list=new ArrayList<>();
         for (int i=0;i<24;i++)
             list.add(i);
         hour1Combo.setItems(FXCollections.observableList(list));
@@ -178,54 +181,63 @@ public class AgencyView implements ObserverInterface {
 
     public void onReserveButtonClicked(ActionEvent actionEvent) {
         //todo: check all fields to be filled
-        String clientName=clientNameField.getText() ;
-        String phoneNumber=phoneNumberField.getText();
-        int noSeats=Integer.parseInt(noSeatsField.getText());
-        Client client=clientList.getSelectionModel().getSelectedItem();
-        var selection1= tableTripFiltered.getSelectionModel().getSelectedItem();
-        var selection2= tableTrip.getSelectionModel().getSelectedItem();
-        Trip trip;
-        if (selection1!=null) {
-            trip=selection1;
-        } else trip=selection2;
+        try {
+            String clientName=clientNameField.getText() ;
+            String phoneNumber=phoneNumberField.getText();
+            int noSeats=Integer.parseInt(noSeatsField.getText());
+            Client client=clientList.getSelectionModel().getSelectedItem();
+            var selection1= tableTripFiltered.getSelectionModel().getSelectedItem();
+            var selection2= tableTrip.getSelectionModel().getSelectedItem();
+            if(clientName.isEmpty() || phoneNumber.isEmpty() || noSeats==0)
+                throw new Exception("empty fields");
+            if(client==null)
+                throw new Exception("Not selected client");
+            if((selection1==null && selection2==null))
+                throw new Exception("Not selected trip");
+            Trip trip;
+            if (selection1!=null) {
+                trip=selection1;
+            } else trip=selection2;
+
+            if(trip.getTotalSeats()==0)
+                throw new Exception("no more seats...");
 
 //        System.out.println(clientName);
 //        System.out.println(phoneNumber);
 //        System.out.println(noSeats);
 //        System.out.println(trip.getId());
 //        System.out.println(client.toString());
-        try {
             service.saveReservation(clientName,phoneNumber,noSeats,trip,responsibleEmployee,client);
             MessageAlert.showMessage(primaryStage, Alert.AlertType.INFORMATION,"Info","Successful reservation...");
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
-            MessageAlert.showMessage(primaryStage, Alert.AlertType.ERROR,"Error","Could not save the reservation...");
+            MessageAlert.showMessage(primaryStage, Alert.AlertType.ERROR,"Error", e.toString());
         }
     }
 
     public void onRefreshButtonClicked(ActionEvent actionEvent) {
-       // loadData();
+        // loadData();
     }
 
 
 
     @Override
-    public void reservationMade() {
+    public void reservationUpdate() {
 
         Platform.runLater(this::loadData);
     }
 
     public void onLogOutButtonClicked(ActionEvent actionEvent) {
-       try
-       {
-                service.logout(responsibleEmployee, this);
-                primaryStage.close();
-            }
-            catch (AppException e)
-            {
-                MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Something went wrong",e.getMessage());
-            }
+        try
+        {
+            service.logout(responsibleEmployee, this);
+            primaryStage.close();
+        }
+        catch (AppException e)
+        {
+            MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Something went wrong",e.getMessage());
+        }
     }
 }

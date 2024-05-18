@@ -141,7 +141,7 @@ public class AgencyClientProtoWorker implements Runnable, ObserverInterface {
                 LocalDateTime endTime=data.getEndTime();
                 List< TripDTO> trips = (List<TripDTO>) server.getAllFilteredTripsPlaceTime(placeToVisit,startTime,endTime);
                 return ProtoUtils.createFindAllFilteredTripsResponse(trips);
-               // return new Response.Builder().type(ResponseType.OK).data(trips).build();
+                // return new Response.Builder().type(ResponseType.OK).data(trips).build();
             }catch (AppException e){
                 return ProtoUtils.createErrorResponse(e.getMessage());
             }
@@ -187,7 +187,7 @@ public class AgencyClientProtoWorker implements Runnable, ObserverInterface {
     }
 
     @Override
-    public void reservationMade() {
+    public void reservationUpdate() {
         AgencyProtocol.Response respone=ProtoUtils.createUpdateResponse();
         sendResponse(respone);
     }

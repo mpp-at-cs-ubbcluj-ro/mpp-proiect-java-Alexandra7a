@@ -32,30 +32,30 @@ namespace Proto {
             "CWRlcGFydHVyZRgEIAEoCRINCgVwcmljZRgFIAEoAhISCgp0b3RhbFNlYXRz",
             "GAYgASgFIjgKCUNsaWVudERUTxIKCgJpZBgBIAEoAxIMCgRuYW1lGAIgASgJ",
             "EhEKCWJpcnRoRGF0ZRgDIAEoCSIuCghFbXBsb3llZRIQCgh1c2VybmFtZRgB",
-            "IAEoCRIQCghwYXNzd29yZBgCIAEoCSJpCgRUcmlwEg0KBXBsYWNlGAEgASgJ",
-            "EhwKFHRyYW5zcG9ydENvbXBhbnlOYW1lGAIgASgJEhEKCWRlcGFydHVyZRgD",
-            "IAEoCRINCgVwcmljZRgEIAEoAhISCgp0b3RhbFNlYXRzGAUgASgFIikKBkNs",
-            "aWVudBIMCgRuYW1lGAEgASgJEhEKCWJpcnRoZGF0ZRgCIAEoCSKyAQoOUmVz",
-            "ZXJ2YXRpb25EVE8SEgoKY2xpZW50TmFtZRgBIAEoCRITCgtwaG9uZU51bWJl",
-            "chgCIAEoCRIPCgdub1NlYXRzGAMgASgFEhkKBHRyaXAYBCABKAsyCy5wcm90",
-            "by5UcmlwEiwKE3Jlc3BvbnNpYmxlRW1wbG95ZWUYBSABKAsyDy5wcm90by5F",
-            "bXBsb3llZRIdCgZjbGllbnQYBiABKAsyDS5wcm90by5DbGllbnQiiwMKB1Jl",
-            "cXVlc3QSKAoEdHlwZRgBIAEoDjIaLnByb3RvLlJlcXVlc3QuUmVxdWVzdFR5",
-            "cGUSNgoXdHJpcEZpbHRlckJ5RGF0YVJlcXVlc3QYAiABKAsyEy5wcm90by5U",
-            "cmlwRmlsdGVyQnlIABIMCgJpZBgDIAEoA0gAEiUKB3VzZXJEdG8YBCABKAsy",
-            "Ei5wcm90by5FbXBsb3llZURUT0gAEi8KDnJlc2VydmF0aW9uRHRvGAUgASgL",
-            "MhUucHJvdG8uUmVzZXJ2YXRpb25EVE9IABIjCghlbXBsb3llZRgGIAEoCzIP",
-            "LnByb3RvLkVtcGxveWVlSAAiigEKC1JlcXVlc3RUeXBlEgkKBUxPR0lOEAAS",
-            "CgoGTE9HT1VUEAESEgoORklORF9BTExfVFJJUFMQAhIUChBHRVRfUkVTRVJW",
-            "QVRJT05TEAMSFAoQRklORF9BTExfQ0xJRU5UUxAEEhAKDEZJTFRFUl9UUklQ",
-            "UxAFEhIKDlJFU0VSVkVfVElDS0VUEAZCBgoEZGF0YSLnAQoIUmVzcG9uc2US",
-            "KQoEdHlwZRgBIAEoDjIbLnByb3RvLlJlc3BvbnNlLlJlcG9uc2VUeXBlEg0K",
-            "BWVycm9yGAIgASgJEiEKB2NsaWVudHMYAyADKAsyEC5wcm90by5DbGllbnRE",
-            "VE8SHQoFdHJpcHMYBCADKAsyDi5wcm90by5UcmlwRFRPEgoKAm5vGAUgASgF",
-            "IlMKC1JlcG9uc2VUeXBlEgYKAk9LEAASCQoFRVJST1IQARINCglHRVRfVFJJ",
-            "UFMQAhIWChJHRVRfVFJJUFNfRklMVEVSRUQQAxIKCgZVUERBVEUQBEIvCh1v",
-            "cmcuZXhhbXBsZS5wcm90b2J1ZmZwcm90b2NvbEIOQWdlbmN5UHJvdG9jb2xi",
-            "BnByb3RvMw=="));
+            "IAEoCRIQCghwYXNzd29yZBgCIAEoCSJ1CgRUcmlwEgoKAmlkGAEgASgDEg0K",
+            "BXBsYWNlGAIgASgJEhwKFHRyYW5zcG9ydENvbXBhbnlOYW1lGAMgASgJEhEK",
+            "CWRlcGFydHVyZRgEIAEoCRINCgVwcmljZRgFIAEoAhISCgp0b3RhbFNlYXRz",
+            "GAYgASgFIjUKBkNsaWVudBIKCgJpZBgBIAEoAxIMCgRuYW1lGAIgASgJEhEK",
+            "CWJpcnRoZGF0ZRgDIAEoCSKyAQoOUmVzZXJ2YXRpb25EVE8SEgoKY2xpZW50",
+            "TmFtZRgBIAEoCRITCgtwaG9uZU51bWJlchgCIAEoCRIPCgdub1NlYXRzGAMg",
+            "ASgFEhkKBHRyaXAYBCABKAsyCy5wcm90by5UcmlwEiwKE3Jlc3BvbnNpYmxl",
+            "RW1wbG95ZWUYBSABKAsyDy5wcm90by5FbXBsb3llZRIdCgZjbGllbnQYBiAB",
+            "KAsyDS5wcm90by5DbGllbnQiiwMKB1JlcXVlc3QSKAoEdHlwZRgBIAEoDjIa",
+            "LnByb3RvLlJlcXVlc3QuUmVxdWVzdFR5cGUSNgoXdHJpcEZpbHRlckJ5RGF0",
+            "YVJlcXVlc3QYAiABKAsyEy5wcm90by5UcmlwRmlsdGVyQnlIABIMCgJpZBgD",
+            "IAEoA0gAEiUKB3VzZXJEdG8YBCABKAsyEi5wcm90by5FbXBsb3llZURUT0gA",
+            "Ei8KDnJlc2VydmF0aW9uRHRvGAUgASgLMhUucHJvdG8uUmVzZXJ2YXRpb25E",
+            "VE9IABIjCghlbXBsb3llZRgGIAEoCzIPLnByb3RvLkVtcGxveWVlSAAiigEK",
+            "C1JlcXVlc3RUeXBlEgkKBUxPR0lOEAASCgoGTE9HT1VUEAESEgoORklORF9B",
+            "TExfVFJJUFMQAhIUChBHRVRfUkVTRVJWQVRJT05TEAMSFAoQRklORF9BTExf",
+            "Q0xJRU5UUxAEEhAKDEZJTFRFUl9UUklQUxAFEhIKDlJFU0VSVkVfVElDS0VU",
+            "EAZCBgoEZGF0YSLnAQoIUmVzcG9uc2USKQoEdHlwZRgBIAEoDjIbLnByb3Rv",
+            "LlJlc3BvbnNlLlJlcG9uc2VUeXBlEg0KBWVycm9yGAIgASgJEiEKB2NsaWVu",
+            "dHMYAyADKAsyEC5wcm90by5DbGllbnREVE8SHQoFdHJpcHMYBCADKAsyDi5w",
+            "cm90by5UcmlwRFRPEgoKAm5vGAUgASgFIlMKC1JlcG9uc2VUeXBlEgYKAk9L",
+            "EAASCQoFRVJST1IQARINCglHRVRfVFJJUFMQAhIWChJHRVRfVFJJUFNfRklM",
+            "VEVSRUQQAxIKCgZVUERBVEUQBEIvCh1vcmcuZXhhbXBsZS5wcm90b2J1ZmZw",
+            "cm90b2NvbEIOQWdlbmN5UHJvdG9jb2xiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,8 +64,8 @@ namespace Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.TripDTO), global::Proto.TripDTO.Parser, new[]{ "Id", "Place", "TransportCompanyName", "Departure", "Price", "TotalSeats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.ClientDTO), global::Proto.ClientDTO.Parser, new[]{ "Id", "Name", "BirthDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Employee), global::Proto.Employee.Parser, new[]{ "Username", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Trip), global::Proto.Trip.Parser, new[]{ "Place", "TransportCompanyName", "Departure", "Price", "TotalSeats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Client), global::Proto.Client.Parser, new[]{ "Name", "Birthdate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Trip), global::Proto.Trip.Parser, new[]{ "Id", "Place", "TransportCompanyName", "Departure", "Price", "TotalSeats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Client), global::Proto.Client.Parser, new[]{ "Id", "Name", "Birthdate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.ReservationDTO), global::Proto.ReservationDTO.Parser, new[]{ "ClientName", "PhoneNumber", "NoSeats", "Trip", "ResponsibleEmployee", "Client" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Request), global::Proto.Request.Parser, new[]{ "Type", "TripFilterByDataRequest", "Id", "UserDto", "ReservationDto", "Employee" }, new[]{ "Data" }, new[]{ typeof(global::Proto.Request.Types.RequestType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Response), global::Proto.Response.Parser, new[]{ "Type", "Error", "Clients", "Trips", "No" }, null, new[]{ typeof(global::Proto.Response.Types.ReponseType) }, null, null)
@@ -1507,6 +1507,7 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Trip(Trip other) : this() {
+      id_ = other.id_;
       place_ = other.place_;
       transportCompanyName_ = other.transportCompanyName_;
       departure_ = other.departure_;
@@ -1521,8 +1522,20 @@ namespace Proto {
       return new Trip(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private long id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
     /// <summary>Field number for the "place" field.</summary>
-    public const int PlaceFieldNumber = 1;
+    public const int PlaceFieldNumber = 2;
     private string place_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1534,7 +1547,7 @@ namespace Proto {
     }
 
     /// <summary>Field number for the "transportCompanyName" field.</summary>
-    public const int TransportCompanyNameFieldNumber = 2;
+    public const int TransportCompanyNameFieldNumber = 3;
     private string transportCompanyName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1546,7 +1559,7 @@ namespace Proto {
     }
 
     /// <summary>Field number for the "departure" field.</summary>
-    public const int DepartureFieldNumber = 3;
+    public const int DepartureFieldNumber = 4;
     private string departure_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1558,7 +1571,7 @@ namespace Proto {
     }
 
     /// <summary>Field number for the "price" field.</summary>
-    public const int PriceFieldNumber = 4;
+    public const int PriceFieldNumber = 5;
     private float price_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1570,7 +1583,7 @@ namespace Proto {
     }
 
     /// <summary>Field number for the "totalSeats" field.</summary>
-    public const int TotalSeatsFieldNumber = 5;
+    public const int TotalSeatsFieldNumber = 6;
     private int totalSeats_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1596,6 +1609,7 @@ namespace Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Id != other.Id) return false;
       if (Place != other.Place) return false;
       if (TransportCompanyName != other.TransportCompanyName) return false;
       if (Departure != other.Departure) return false;
@@ -1608,6 +1622,7 @@ namespace Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (Place.Length != 0) hash ^= Place.GetHashCode();
       if (TransportCompanyName.Length != 0) hash ^= TransportCompanyName.GetHashCode();
       if (Departure.Length != 0) hash ^= Departure.GetHashCode();
@@ -1631,24 +1646,28 @@ namespace Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Id != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Id);
+      }
       if (Place.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Place);
       }
       if (TransportCompanyName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(TransportCompanyName);
       }
       if (Departure.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteString(Departure);
       }
       if (Price != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(45);
         output.WriteFloat(Price);
       }
       if (TotalSeats != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(TotalSeats);
       }
       if (_unknownFields != null) {
@@ -1661,24 +1680,28 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Id);
+      }
       if (Place.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Place);
       }
       if (TransportCompanyName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(TransportCompanyName);
       }
       if (Departure.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteString(Departure);
       }
       if (Price != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(45);
         output.WriteFloat(Price);
       }
       if (TotalSeats != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(TotalSeats);
       }
       if (_unknownFields != null) {
@@ -1691,6 +1714,9 @@ namespace Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      }
       if (Place.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Place);
       }
@@ -1717,6 +1743,9 @@ namespace Proto {
     public void MergeFrom(Trip other) {
       if (other == null) {
         return;
+      }
+      if (other.Id != 0L) {
+        Id = other.Id;
       }
       if (other.Place.Length != 0) {
         Place = other.Place;
@@ -1752,23 +1781,27 @@ namespace Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Place = input.ReadString();
+          case 8: {
+            Id = input.ReadInt64();
             break;
           }
           case 18: {
-            TransportCompanyName = input.ReadString();
+            Place = input.ReadString();
             break;
           }
           case 26: {
+            TransportCompanyName = input.ReadString();
+            break;
+          }
+          case 34: {
             Departure = input.ReadString();
             break;
           }
-          case 37: {
+          case 45: {
             Price = input.ReadFloat();
             break;
           }
-          case 40: {
+          case 48: {
             TotalSeats = input.ReadInt32();
             break;
           }
@@ -1791,23 +1824,27 @@ namespace Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Place = input.ReadString();
+          case 8: {
+            Id = input.ReadInt64();
             break;
           }
           case 18: {
-            TransportCompanyName = input.ReadString();
+            Place = input.ReadString();
             break;
           }
           case 26: {
+            TransportCompanyName = input.ReadString();
+            break;
+          }
+          case 34: {
             Departure = input.ReadString();
             break;
           }
-          case 37: {
+          case 45: {
             Price = input.ReadFloat();
             break;
           }
-          case 40: {
+          case 48: {
             TotalSeats = input.ReadInt32();
             break;
           }
@@ -1853,6 +1890,7 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Client(Client other) : this() {
+      id_ = other.id_;
       name_ = other.name_;
       birthdate_ = other.birthdate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1864,8 +1902,20 @@ namespace Proto {
       return new Client(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private long id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
+    public const int NameFieldNumber = 2;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1877,7 +1927,7 @@ namespace Proto {
     }
 
     /// <summary>Field number for the "birthdate" field.</summary>
-    public const int BirthdateFieldNumber = 2;
+    public const int BirthdateFieldNumber = 3;
     private string birthdate_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1903,6 +1953,7 @@ namespace Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Id != other.Id) return false;
       if (Name != other.Name) return false;
       if (Birthdate != other.Birthdate) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1912,6 +1963,7 @@ namespace Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Id != 0L) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Birthdate.Length != 0) hash ^= Birthdate.GetHashCode();
       if (_unknownFields != null) {
@@ -1932,12 +1984,16 @@ namespace Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Id != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Id);
+      }
       if (Name.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (Birthdate.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Birthdate);
       }
       if (_unknownFields != null) {
@@ -1950,12 +2006,16 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Id);
+      }
       if (Name.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (Birthdate.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Birthdate);
       }
       if (_unknownFields != null) {
@@ -1968,6 +2028,9 @@ namespace Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Id != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -1985,6 +2048,9 @@ namespace Proto {
     public void MergeFrom(Client other) {
       if (other == null) {
         return;
+      }
+      if (other.Id != 0L) {
+        Id = other.Id;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -2011,11 +2077,15 @@ namespace Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Name = input.ReadString();
+          case 8: {
+            Id = input.ReadInt64();
             break;
           }
           case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
             Birthdate = input.ReadString();
             break;
           }
@@ -2038,11 +2108,15 @@ namespace Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Name = input.ReadString();
+          case 8: {
+            Id = input.ReadInt64();
             break;
           }
           case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
             Birthdate = input.ReadString();
             break;
           }
@@ -3302,7 +3376,13 @@ namespace Proto {
       public enum ReponseType {
         [pbr::OriginalName("OK")] Ok = 0,
         [pbr::OriginalName("ERROR")] Error = 1,
+        /// <summary>
+        ///not used
+        /// </summary>
         [pbr::OriginalName("GET_TRIPS")] GetTrips = 2,
+        /// <summary>
+        ///not used
+        /// </summary>
         [pbr::OriginalName("GET_TRIPS_FILTERED")] GetTripsFiltered = 3,
         [pbr::OriginalName("UPDATE")] Update = 4,
       }

@@ -59,7 +59,7 @@ public class LogInView {
         {
             MessageAlert.showMessage(null, Alert.AlertType.ERROR,"Something went wrong",e.getMessage());
         }
- }
+    }
 
 
 }

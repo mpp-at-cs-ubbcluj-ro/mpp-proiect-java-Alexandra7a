@@ -217,7 +217,7 @@ public class AgencyServiceProtoProxy implements  ServiceInterface {
 
         if (response.getType() == AgencyProtocol.Response.ReponseType.UPDATE) {
             System.out.println("Update handleUpdate Proxy");
-            client.reservationMade();
+            client.reservationUpdate();
         }
     }
 

@@ -36,15 +36,17 @@ message Employee {
   string password=2;
 }
 message Trip{
-  string place=1;
-  string transportCompanyName=2;
-  string departure=3;
-  float price=4;
-  int32 totalSeats=5;
+  int64 id=1;
+  string place=2;
+  string transportCompanyName=3;
+  string departure=4;
+  float price=5;
+  int32 totalSeats=6;
 }
 message Client{
-  string name=1;
-  string birthdate=2;
+  int64 id=1;
+  string name=2;
+  string birthdate=3;
 }
 message ReservationDTO{
   string  clientName=1;

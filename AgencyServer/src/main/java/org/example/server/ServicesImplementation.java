@@ -47,7 +47,7 @@ public class ServicesImplementation implements ServiceInterface {
         for (var loggedClient : loggedClients.values()) {
             if (loggedClient == null)
                 continue;
-            executorService.execute(loggedClient::reservationMade);
+            executorService.execute(loggedClient::reservationUpdate);
         }
     }
     public synchronized void logout(Employee user, ObserverInterface client) throws AppException {

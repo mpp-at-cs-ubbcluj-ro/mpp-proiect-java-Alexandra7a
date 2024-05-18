@@ -228,7 +228,7 @@ public class AgencyServicesRpcProxy implements ServiceInterface {
         if (response.type() == ResponseType.UPDATE) {
             //TODO: ce tip
             System.out.println("Ceva acolo ceva");
-            client.reservationMade();
+            client.reservationUpdate();
         }
        /* if (response.type()== ResponseType.FRIEND_LOGGED_IN){
 

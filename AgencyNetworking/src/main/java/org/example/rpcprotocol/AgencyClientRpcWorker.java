@@ -206,7 +206,7 @@ public class AgencyClientRpcWorker implements Runnable, ObserverInterface {
     }
 
     @Override
-    public void reservationMade() {
+    public void reservationUpdate() {
         Response respone=new Response.Builder().type(ResponseType.UPDATE).data(null).build();
         sendResponse(respone);
     }

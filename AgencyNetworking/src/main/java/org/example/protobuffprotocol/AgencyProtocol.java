@@ -3908,49 +3908,55 @@ public final class AgencyProtocol {
           com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string place = 1;</code>
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string place = 2;</code>
      * @return The place.
      */
     java.lang.String getPlace();
     /**
-     * <code>string place = 1;</code>
+     * <code>string place = 2;</code>
      * @return The bytes for place.
      */
     com.google.protobuf.ByteString
     getPlaceBytes();
 
     /**
-     * <code>string transportCompanyName = 2;</code>
+     * <code>string transportCompanyName = 3;</code>
      * @return The transportCompanyName.
      */
     java.lang.String getTransportCompanyName();
     /**
-     * <code>string transportCompanyName = 2;</code>
+     * <code>string transportCompanyName = 3;</code>
      * @return The bytes for transportCompanyName.
      */
     com.google.protobuf.ByteString
     getTransportCompanyNameBytes();
 
     /**
-     * <code>string departure = 3;</code>
+     * <code>string departure = 4;</code>
      * @return The departure.
      */
     java.lang.String getDeparture();
     /**
-     * <code>string departure = 3;</code>
+     * <code>string departure = 4;</code>
      * @return The bytes for departure.
      */
     com.google.protobuf.ByteString
     getDepartureBytes();
 
     /**
-     * <code>float price = 4;</code>
+     * <code>float price = 5;</code>
      * @return The price.
      */
     float getPrice();
 
     /**
-     * <code>int32 totalSeats = 5;</code>
+     * <code>int32 totalSeats = 6;</code>
      * @return The totalSeats.
      */
     int getTotalSeats();
@@ -3995,11 +4001,22 @@ public final class AgencyProtocol {
                       org.example.protobuffprotocol.AgencyProtocol.Trip.class, org.example.protobuffprotocol.AgencyProtocol.Trip.Builder.class);
     }
 
-    public static final int PLACE_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int PLACE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object place_ = "";
     /**
-     * <code>string place = 1;</code>
+     * <code>string place = 2;</code>
      * @return The place.
      */
     @java.lang.Override
@@ -4016,7 +4033,7 @@ public final class AgencyProtocol {
       }
     }
     /**
-     * <code>string place = 1;</code>
+     * <code>string place = 2;</code>
      * @return The bytes for place.
      */
     @java.lang.Override
@@ -4034,11 +4051,11 @@ public final class AgencyProtocol {
       }
     }
 
-    public static final int TRANSPORTCOMPANYNAME_FIELD_NUMBER = 2;
+    public static final int TRANSPORTCOMPANYNAME_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object transportCompanyName_ = "";
     /**
-     * <code>string transportCompanyName = 2;</code>
+     * <code>string transportCompanyName = 3;</code>
      * @return The transportCompanyName.
      */
     @java.lang.Override
@@ -4055,7 +4072,7 @@ public final class AgencyProtocol {
       }
     }
     /**
-     * <code>string transportCompanyName = 2;</code>
+     * <code>string transportCompanyName = 3;</code>
      * @return The bytes for transportCompanyName.
      */
     @java.lang.Override
@@ -4073,11 +4090,11 @@ public final class AgencyProtocol {
       }
     }
 
-    public static final int DEPARTURE_FIELD_NUMBER = 3;
+    public static final int DEPARTURE_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object departure_ = "";
     /**
-     * <code>string departure = 3;</code>
+     * <code>string departure = 4;</code>
      * @return The departure.
      */
     @java.lang.Override
@@ -4094,7 +4111,7 @@ public final class AgencyProtocol {
       }
     }
     /**
-     * <code>string departure = 3;</code>
+     * <code>string departure = 4;</code>
      * @return The bytes for departure.
      */
     @java.lang.Override
@@ -4112,10 +4129,10 @@ public final class AgencyProtocol {
       }
     }
 
-    public static final int PRICE_FIELD_NUMBER = 4;
+    public static final int PRICE_FIELD_NUMBER = 5;
     private float price_ = 0F;
     /**
-     * <code>float price = 4;</code>
+     * <code>float price = 5;</code>
      * @return The price.
      */
     @java.lang.Override
@@ -4123,10 +4140,10 @@ public final class AgencyProtocol {
       return price_;
     }
 
-    public static final int TOTALSEATS_FIELD_NUMBER = 5;
+    public static final int TOTALSEATS_FIELD_NUMBER = 6;
     private int totalSeats_ = 0;
     /**
-     * <code>int32 totalSeats = 5;</code>
+     * <code>int32 totalSeats = 6;</code>
      * @return The totalSeats.
      */
     @java.lang.Override
@@ -4148,20 +4165,23 @@ public final class AgencyProtocol {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(place_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, place_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, place_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transportCompanyName_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, transportCompanyName_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, transportCompanyName_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(departure_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, departure_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, departure_);
       }
       if (java.lang.Float.floatToRawIntBits(price_) != 0) {
-        output.writeFloat(4, price_);
+        output.writeFloat(5, price_);
       }
       if (totalSeats_ != 0) {
-        output.writeInt32(5, totalSeats_);
+        output.writeInt32(6, totalSeats_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4172,22 +4192,26 @@ public final class AgencyProtocol {
       if (size != -1) return size;
 
       size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeInt64Size(1, id_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(place_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, place_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, place_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transportCompanyName_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, transportCompanyName_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, transportCompanyName_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(departure_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, departure_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, departure_);
       }
       if (java.lang.Float.floatToRawIntBits(price_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(4, price_);
+                .computeFloatSize(5, price_);
       }
       if (totalSeats_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(5, totalSeats_);
+                .computeInt32Size(6, totalSeats_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4204,6 +4228,8 @@ public final class AgencyProtocol {
       }
       org.example.protobuffprotocol.AgencyProtocol.Trip other = (org.example.protobuffprotocol.AgencyProtocol.Trip) obj;
 
+      if (getId()
+              != other.getId()) return false;
       if (!getPlace()
               .equals(other.getPlace())) return false;
       if (!getTransportCompanyName()
@@ -4226,6 +4252,9 @@ public final class AgencyProtocol {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getId());
       hash = (37 * hash) + PLACE_FIELD_NUMBER;
       hash = (53 * hash) + getPlace().hashCode();
       hash = (37 * hash) + TRANSPORTCOMPANYNAME_FIELD_NUMBER;
@@ -4368,6 +4397,7 @@ public final class AgencyProtocol {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        id_ = 0L;
         place_ = "";
         transportCompanyName_ = "";
         departure_ = "";
@@ -4407,18 +4437,21 @@ public final class AgencyProtocol {
       private void buildPartial0(org.example.protobuffprotocol.AgencyProtocol.Trip result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.place_ = place_;
+          result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.transportCompanyName_ = transportCompanyName_;
+          result.place_ = place_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.departure_ = departure_;
+          result.transportCompanyName_ = transportCompanyName_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.price_ = price_;
+          result.departure_ = departure_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.price_ = price_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.totalSeats_ = totalSeats_;
         }
       }
@@ -4435,19 +4468,22 @@ public final class AgencyProtocol {
 
       public Builder mergeFrom(org.example.protobuffprotocol.AgencyProtocol.Trip other) {
         if (other == org.example.protobuffprotocol.AgencyProtocol.Trip.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
         if (!other.getPlace().isEmpty()) {
           place_ = other.place_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getTransportCompanyName().isEmpty()) {
           transportCompanyName_ = other.transportCompanyName_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getDeparture().isEmpty()) {
           departure_ = other.departure_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getPrice() != 0F) {
@@ -4482,31 +4518,36 @@ public final class AgencyProtocol {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                place_ = input.readStringRequireUtf8();
+              case 8: {
+                id_ = input.readInt64();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 10
+              } // case 8
               case 18: {
-                transportCompanyName_ = input.readStringRequireUtf8();
+                place_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                departure_ = input.readStringRequireUtf8();
+                transportCompanyName_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 37: {
-                price_ = input.readFloat();
+              case 34: {
+                departure_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 37
-              case 40: {
-                totalSeats_ = input.readInt32();
+              } // case 34
+              case 45: {
+                price_ = input.readFloat();
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 40
+              } // case 45
+              case 48: {
+                totalSeats_ = input.readInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4524,9 +4565,41 @@ public final class AgencyProtocol {
       }
       private int bitField0_;
 
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object place_ = "";
       /**
-       * <code>string place = 1;</code>
+       * <code>string place = 2;</code>
        * @return The place.
        */
       public java.lang.String getPlace() {
@@ -4542,7 +4615,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string place = 1;</code>
+       * <code>string place = 2;</code>
        * @return The bytes for place.
        */
       public com.google.protobuf.ByteString
@@ -4559,7 +4632,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string place = 1;</code>
+       * <code>string place = 2;</code>
        * @param value The place to set.
        * @return This builder for chaining.
        */
@@ -4567,22 +4640,22 @@ public final class AgencyProtocol {
               java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         place_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string place = 1;</code>
+       * <code>string place = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearPlace() {
         place_ = getDefaultInstance().getPlace();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string place = 1;</code>
+       * <code>string place = 2;</code>
        * @param value The bytes for place to set.
        * @return This builder for chaining.
        */
@@ -4591,14 +4664,14 @@ public final class AgencyProtocol {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         place_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object transportCompanyName_ = "";
       /**
-       * <code>string transportCompanyName = 2;</code>
+       * <code>string transportCompanyName = 3;</code>
        * @return The transportCompanyName.
        */
       public java.lang.String getTransportCompanyName() {
@@ -4614,7 +4687,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string transportCompanyName = 2;</code>
+       * <code>string transportCompanyName = 3;</code>
        * @return The bytes for transportCompanyName.
        */
       public com.google.protobuf.ByteString
@@ -4631,7 +4704,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string transportCompanyName = 2;</code>
+       * <code>string transportCompanyName = 3;</code>
        * @param value The transportCompanyName to set.
        * @return This builder for chaining.
        */
@@ -4639,22 +4712,22 @@ public final class AgencyProtocol {
               java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         transportCompanyName_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string transportCompanyName = 2;</code>
+       * <code>string transportCompanyName = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearTransportCompanyName() {
         transportCompanyName_ = getDefaultInstance().getTransportCompanyName();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string transportCompanyName = 2;</code>
+       * <code>string transportCompanyName = 3;</code>
        * @param value The bytes for transportCompanyName to set.
        * @return This builder for chaining.
        */
@@ -4663,14 +4736,14 @@ public final class AgencyProtocol {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         transportCompanyName_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object departure_ = "";
       /**
-       * <code>string departure = 3;</code>
+       * <code>string departure = 4;</code>
        * @return The departure.
        */
       public java.lang.String getDeparture() {
@@ -4686,7 +4759,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string departure = 3;</code>
+       * <code>string departure = 4;</code>
        * @return The bytes for departure.
        */
       public com.google.protobuf.ByteString
@@ -4703,7 +4776,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string departure = 3;</code>
+       * <code>string departure = 4;</code>
        * @param value The departure to set.
        * @return This builder for chaining.
        */
@@ -4711,22 +4784,22 @@ public final class AgencyProtocol {
               java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         departure_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string departure = 3;</code>
+       * <code>string departure = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeparture() {
         departure_ = getDefaultInstance().getDeparture();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string departure = 3;</code>
+       * <code>string departure = 4;</code>
        * @param value The bytes for departure to set.
        * @return This builder for chaining.
        */
@@ -4735,14 +4808,14 @@ public final class AgencyProtocol {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         departure_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private float price_ ;
       /**
-       * <code>float price = 4;</code>
+       * <code>float price = 5;</code>
        * @return The price.
        */
       @java.lang.Override
@@ -4750,23 +4823,23 @@ public final class AgencyProtocol {
         return price_;
       }
       /**
-       * <code>float price = 4;</code>
+       * <code>float price = 5;</code>
        * @param value The price to set.
        * @return This builder for chaining.
        */
       public Builder setPrice(float value) {
 
         price_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>float price = 4;</code>
+       * <code>float price = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearPrice() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         price_ = 0F;
         onChanged();
         return this;
@@ -4774,7 +4847,7 @@ public final class AgencyProtocol {
 
       private int totalSeats_ ;
       /**
-       * <code>int32 totalSeats = 5;</code>
+       * <code>int32 totalSeats = 6;</code>
        * @return The totalSeats.
        */
       @java.lang.Override
@@ -4782,23 +4855,23 @@ public final class AgencyProtocol {
         return totalSeats_;
       }
       /**
-       * <code>int32 totalSeats = 5;</code>
+       * <code>int32 totalSeats = 6;</code>
        * @param value The totalSeats to set.
        * @return This builder for chaining.
        */
       public Builder setTotalSeats(int value) {
 
         totalSeats_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 totalSeats = 5;</code>
+       * <code>int32 totalSeats = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalSeats() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         totalSeats_ = 0;
         onChanged();
         return this;
@@ -4860,24 +4933,30 @@ public final class AgencyProtocol {
           com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
     getNameBytes();
 
     /**
-     * <code>string birthdate = 2;</code>
+     * <code>string birthdate = 3;</code>
      * @return The birthdate.
      */
     java.lang.String getBirthdate();
     /**
-     * <code>string birthdate = 2;</code>
+     * <code>string birthdate = 3;</code>
      * @return The bytes for birthdate.
      */
     com.google.protobuf.ByteString
@@ -4922,11 +5001,22 @@ public final class AgencyProtocol {
                       org.example.protobuffprotocol.AgencyProtocol.Client.class, org.example.protobuffprotocol.AgencyProtocol.Client.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4943,7 +5033,7 @@ public final class AgencyProtocol {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4961,11 +5051,11 @@ public final class AgencyProtocol {
       }
     }
 
-    public static final int BIRTHDATE_FIELD_NUMBER = 2;
+    public static final int BIRTHDATE_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object birthdate_ = "";
     /**
-     * <code>string birthdate = 2;</code>
+     * <code>string birthdate = 3;</code>
      * @return The birthdate.
      */
     @java.lang.Override
@@ -4982,7 +5072,7 @@ public final class AgencyProtocol {
       }
     }
     /**
-     * <code>string birthdate = 2;</code>
+     * <code>string birthdate = 3;</code>
      * @return The bytes for birthdate.
      */
     @java.lang.Override
@@ -5014,11 +5104,14 @@ public final class AgencyProtocol {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(birthdate_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, birthdate_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, birthdate_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5029,11 +5122,15 @@ public final class AgencyProtocol {
       if (size != -1) return size;
 
       size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeInt64Size(1, id_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(birthdate_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, birthdate_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, birthdate_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5050,6 +5147,8 @@ public final class AgencyProtocol {
       }
       org.example.protobuffprotocol.AgencyProtocol.Client other = (org.example.protobuffprotocol.AgencyProtocol.Client) obj;
 
+      if (getId()
+              != other.getId()) return false;
       if (!getName()
               .equals(other.getName())) return false;
       if (!getBirthdate()
@@ -5065,6 +5164,9 @@ public final class AgencyProtocol {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getId());
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + BIRTHDATE_FIELD_NUMBER;
@@ -5200,6 +5302,7 @@ public final class AgencyProtocol {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        id_ = 0L;
         name_ = "";
         birthdate_ = "";
         return this;
@@ -5236,9 +5339,12 @@ public final class AgencyProtocol {
       private void buildPartial0(org.example.protobuffprotocol.AgencyProtocol.Client result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
+          result.id_ = id_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.birthdate_ = birthdate_;
         }
       }
@@ -5255,14 +5361,17 @@ public final class AgencyProtocol {
 
       public Builder mergeFrom(org.example.protobuffprotocol.AgencyProtocol.Client other) {
         if (other == org.example.protobuffprotocol.AgencyProtocol.Client.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getBirthdate().isEmpty()) {
           birthdate_ = other.birthdate_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5291,16 +5400,21 @@ public final class AgencyProtocol {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
+              case 8: {
+                id_ = input.readInt64();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 10
+              } // case 8
               case 18: {
-                birthdate_ = input.readStringRequireUtf8();
+                name_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                birthdate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5318,9 +5432,41 @@ public final class AgencyProtocol {
       }
       private int bitField0_;
 
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 2;</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5336,7 +5482,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 2;</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5353,7 +5499,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5361,22 +5507,22 @@ public final class AgencyProtocol {
               java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         name_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
         name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5385,14 +5531,14 @@ public final class AgencyProtocol {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         name_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object birthdate_ = "";
       /**
-       * <code>string birthdate = 2;</code>
+       * <code>string birthdate = 3;</code>
        * @return The birthdate.
        */
       public java.lang.String getBirthdate() {
@@ -5408,7 +5554,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string birthdate = 2;</code>
+       * <code>string birthdate = 3;</code>
        * @return The bytes for birthdate.
        */
       public com.google.protobuf.ByteString
@@ -5425,7 +5571,7 @@ public final class AgencyProtocol {
         }
       }
       /**
-       * <code>string birthdate = 2;</code>
+       * <code>string birthdate = 3;</code>
        * @param value The birthdate to set.
        * @return This builder for chaining.
        */
@@ -5433,22 +5579,22 @@ public final class AgencyProtocol {
               java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         birthdate_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string birthdate = 2;</code>
+       * <code>string birthdate = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearBirthdate() {
         birthdate_ = getDefaultInstance().getBirthdate();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string birthdate = 2;</code>
+       * <code>string birthdate = 3;</code>
        * @param value The bytes for birthdate to set.
        * @return This builder for chaining.
        */
@@ -5457,7 +5603,7 @@ public final class AgencyProtocol {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         birthdate_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8688,10 +8834,18 @@ public final class AgencyProtocol {
        */
       ERROR(1),
       /**
+       * <pre>
+       * not used
+       * </pre>
+       *
        * <code>GET_TRIPS = 2;</code>
        */
       GET_TRIPS(2),
       /**
+       * <pre>
+       * not used
+       * </pre>
+       *
        * <code>GET_TRIPS_FILTERED = 3;</code>
        */
       GET_TRIPS_FILTERED(3),
@@ -8720,10 +8874,18 @@ public final class AgencyProtocol {
        */
       public static final int ERROR_VALUE = 1;
       /**
+       * <pre>
+       * not used
+       * </pre>
+       *
        * <code>GET_TRIPS = 2;</code>
        */
       public static final int GET_TRIPS_VALUE = 2;
       /**
+       * <pre>
+       * not used
+       * </pre>
+       *
        * <code>GET_TRIPS_FILTERED = 3;</code>
        */
       public static final int GET_TRIPS_FILTERED_VALUE = 3;
@@ -10203,33 +10365,33 @@ public final class AgencyProtocol {
                     "\t\022\r\n\005price\030\005 \001(\002\022\022\n\ntotalSeats\030\006 \001(\005\"8\n\t" +
                     "ClientDTO\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\021\n\tb" +
                     "irthDate\030\003 \001(\t\".\n\010Employee\022\020\n\010username\030\001" +
-                    " \001(\t\022\020\n\010password\030\002 \001(\t\"i\n\004Trip\022\r\n\005place\030" +
-                    "\001 \001(\t\022\034\n\024transportCompanyName\030\002 \001(\t\022\021\n\td" +
-                    "eparture\030\003 \001(\t\022\r\n\005price\030\004 \001(\002\022\022\n\ntotalSe" +
-                    "ats\030\005 \001(\005\")\n\006Client\022\014\n\004name\030\001 \001(\t\022\021\n\tbir" +
-                    "thdate\030\002 \001(\t\"\262\001\n\016ReservationDTO\022\022\n\nclien" +
-                    "tName\030\001 \001(\t\022\023\n\013phoneNumber\030\002 \001(\t\022\017\n\007noSe" +
-                    "ats\030\003 \001(\005\022\031\n\004trip\030\004 \001(\0132\013.proto.Trip\022,\n\023" +
-                    "responsibleEmployee\030\005 \001(\0132\017.proto.Employ" +
-                    "ee\022\035\n\006client\030\006 \001(\0132\r.proto.Client\"\213\003\n\007Re" +
-                    "quest\022(\n\004type\030\001 \001(\0162\032.proto.Request.Requ" +
-                    "estType\0226\n\027tripFilterByDataRequest\030\002 \001(\013" +
-                    "2\023.proto.TripFilterByH\000\022\014\n\002id\030\003 \001(\003H\000\022%\n" +
-                    "\007userDto\030\004 \001(\0132\022.proto.EmployeeDTOH\000\022/\n\016" +
-                    "reservationDto\030\005 \001(\0132\025.proto.Reservation" +
-                    "DTOH\000\022#\n\010employee\030\006 \001(\0132\017.proto.Employee" +
-                    "H\000\"\212\001\n\013RequestType\022\t\n\005LOGIN\020\000\022\n\n\006LOGOUT\020" +
-                    "\001\022\022\n\016FIND_ALL_TRIPS\020\002\022\024\n\020GET_RESERVATION" +
-                    "S\020\003\022\024\n\020FIND_ALL_CLIENTS\020\004\022\020\n\014FILTER_TRIP" +
-                    "S\020\005\022\022\n\016RESERVE_TICKET\020\006B\006\n\004data\"\347\001\n\010Resp" +
-                    "onse\022)\n\004type\030\001 \001(\0162\033.proto.Response.Repo" +
-                    "nseType\022\r\n\005error\030\002 \001(\t\022!\n\007clients\030\003 \003(\0132" +
-                    "\020.proto.ClientDTO\022\035\n\005trips\030\004 \003(\0132\016.proto" +
-                    ".TripDTO\022\n\n\002no\030\005 \001(\005\"S\n\013ReponseType\022\006\n\002O" +
-                    "K\020\000\022\t\n\005ERROR\020\001\022\r\n\tGET_TRIPS\020\002\022\026\n\022GET_TRI" +
-                    "PS_FILTERED\020\003\022\n\n\006UPDATE\020\004B/\n\035org.example" +
-                    ".protobuffprotocolB\016AgencyProtocolb\006prot" +
-                    "o3"
+                    " \001(\t\022\020\n\010password\030\002 \001(\t\"u\n\004Trip\022\n\n\002id\030\001 \001" +
+                    "(\003\022\r\n\005place\030\002 \001(\t\022\034\n\024transportCompanyNam" +
+                    "e\030\003 \001(\t\022\021\n\tdeparture\030\004 \001(\t\022\r\n\005price\030\005 \001(" +
+                    "\002\022\022\n\ntotalSeats\030\006 \001(\005\"5\n\006Client\022\n\n\002id\030\001 " +
+                    "\001(\003\022\014\n\004name\030\002 \001(\t\022\021\n\tbirthdate\030\003 \001(\t\"\262\001\n" +
+                    "\016ReservationDTO\022\022\n\nclientName\030\001 \001(\t\022\023\n\013p" +
+                    "honeNumber\030\002 \001(\t\022\017\n\007noSeats\030\003 \001(\005\022\031\n\004tri" +
+                    "p\030\004 \001(\0132\013.proto.Trip\022,\n\023responsibleEmplo" +
+                    "yee\030\005 \001(\0132\017.proto.Employee\022\035\n\006client\030\006 \001" +
+                    "(\0132\r.proto.Client\"\213\003\n\007Request\022(\n\004type\030\001 " +
+                    "\001(\0162\032.proto.Request.RequestType\0226\n\027tripF" +
+                    "ilterByDataRequest\030\002 \001(\0132\023.proto.TripFil" +
+                    "terByH\000\022\014\n\002id\030\003 \001(\003H\000\022%\n\007userDto\030\004 \001(\0132\022" +
+                    ".proto.EmployeeDTOH\000\022/\n\016reservationDto\030\005" +
+                    " \001(\0132\025.proto.ReservationDTOH\000\022#\n\010employe" +
+                    "e\030\006 \001(\0132\017.proto.EmployeeH\000\"\212\001\n\013RequestTy" +
+                    "pe\022\t\n\005LOGIN\020\000\022\n\n\006LOGOUT\020\001\022\022\n\016FIND_ALL_TR" +
+                    "IPS\020\002\022\024\n\020GET_RESERVATIONS\020\003\022\024\n\020FIND_ALL_" +
+                    "CLIENTS\020\004\022\020\n\014FILTER_TRIPS\020\005\022\022\n\016RESERVE_T" +
+                    "ICKET\020\006B\006\n\004data\"\347\001\n\010Response\022)\n\004type\030\001 \001" +
+                    "(\0162\033.proto.Response.ReponseType\022\r\n\005error" +
+                    "\030\002 \001(\t\022!\n\007clients\030\003 \003(\0132\020.proto.ClientDT" +
+                    "O\022\035\n\005trips\030\004 \003(\0132\016.proto.TripDTO\022\n\n\002no\030\005" +
+                    " \001(\005\"S\n\013ReponseType\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001\022\r" +
+                    "\n\tGET_TRIPS\020\002\022\026\n\022GET_TRIPS_FILTERED\020\003\022\n\n" +
+                    "\006UPDATE\020\004B/\n\035org.example.protobuffprotoc" +
+                    "olB\016AgencyProtocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
             .internalBuildGeneratedFileFrom(descriptorData,
@@ -10270,13 +10432,13 @@ public final class AgencyProtocol {
     internal_static_proto_Trip_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
             internal_static_proto_Trip_descriptor,
-            new java.lang.String[] { "Place", "TransportCompanyName", "Departure", "Price", "TotalSeats", });
+            new java.lang.String[] { "Id", "Place", "TransportCompanyName", "Departure", "Price", "TotalSeats", });
     internal_static_proto_Client_descriptor =
             getDescriptor().getMessageTypes().get(6);
     internal_static_proto_Client_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
             internal_static_proto_Client_descriptor,
-            new java.lang.String[] { "Name", "Birthdate", });
+            new java.lang.String[] { "Id", "Name", "Birthdate", });
     internal_static_proto_ReservationDTO_descriptor =
             getDescriptor().getMessageTypes().get(7);
     internal_static_proto_ReservationDTO_fieldAccessorTable = new
