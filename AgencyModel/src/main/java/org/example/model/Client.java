@@ -5,18 +5,12 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-@Entity
-@AttributeOverrides({
-        @AttributeOverride(name="id", column = @Column(name="id_client"))
-})
 
-@Table(name="clients")
 
 public class Client extends Entitate implements Serializable {
 
-    @Column (name="username")
+
     private String name;
-    @Column(name="birthDay")
     private LocalDate birthDate;
 
     public Client(String name, LocalDate birthDate) {
