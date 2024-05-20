@@ -8,4 +8,5 @@ include 'AgencyPersistence'
 include 'AgentieTurism_'
 include 'AgentieTurism_:untitled'
 findProject(':AgentieTurism_:untitled')?.name = 'untitled'
+include 'RestServices'
 

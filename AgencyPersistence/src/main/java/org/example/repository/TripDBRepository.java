@@ -5,6 +5,8 @@ import org.example.repository.interfaces.TripRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.model.Trip;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Properties;
 
+@Component
 public class TripDBRepository implements TripRepository {
     private Logger logger= LogManager.getLogger();
 
@@ -24,7 +27,7 @@ public class TripDBRepository implements TripRepository {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
 
-
+    @Autowired
     public TripDBRepository(Properties properties) {
         logger.info("Initializing TripRepository with properties: {} ",properties);
         this.dbConnection=new DBConnection(properties);
@@ -95,18 +98,92 @@ public class TripDBRepository implements TripRepository {
 
     @Override
     public Optional<Trip> save(Trip entity) {
+        logger.traceEntry("Save trip:  {}",entity);
+        try(PreparedStatement statement=connection.prepareStatement("insert into trips (place, transportCompanyName, departure, price, totalSeats)\n" +
+                "VALUES (?,?,?,?,?) Statement.RETURN_GENERATED_KEYS")){
+            statement.setString(1,entity.getPlace());
+            statement.setString(2,entity.getTransportCompanyName());
+            statement.setString(3,entity.getDeparture().toString());
+            statement.setFloat(4,entity.getPrice());
+            statement.setInt(5,entity.getTotalSeats());
+            ResultSet resultSet= statement.executeQuery();
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                ResultSet generatedKeys = statement.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    long id = generatedKeys.getLong(1);
+                    entity.setId(id);
+                    logger.traceExit("Trip saved successfully");
+                    return Optional.of(entity);
+                }
+            }
+        }
+        catch (SQLException e)
+        {
+            logger.error(e);
+            System.out.println("Error db "+ e);
+        }
+        logger.traceExit("No trip was saved");
         return Optional.empty();
     }
 
     @Override
     public Optional<Trip> update(Long integer, Trip entity) {
+        logger.traceEntry("Save trip:  {}",entity);
+        try(PreparedStatement statement=connection.prepareStatement("UPDATE trips\n" +
+                "SET \n" +
+                "    place = ?,\n" +
+                "    transportCompanyName = ?,\n" +
+                "    departure = ?,\n" +
+                "    price = ?,\n" +
+                "    totalSeats = ?\n" +
+                "WHERE\n" +
+                "    id_trip = ?;\n")){
+            statement.setString(1,entity.getPlace());
+            statement.setString(2,entity.getTransportCompanyName());
+            statement.setString(3,entity.getDeparture().toString());
+            statement.setFloat(4,entity.getPrice());
+            statement.setInt(5,entity.getTotalSeats());
+            statement.setLong(6,integer);
+            int rowsAffected= statement.executeUpdate();
+            if (rowsAffected>0)
+            {
+                logger.traceExit("trip saved successfully");
+
+                return Optional.of(entity);
+            }
+        }
+        catch (SQLException e)
+        {
+            logger.error(e);
+            System.out.println("Error db "+ e);
+        }
+        logger.traceExit("No trip was saved");
         return Optional.empty();
     }
 
     @Override
     public Optional<Trip> delete(Long integer) {
-        return Optional.empty();
-    }
+        logger.traceEntry("Delete trip:  {}",integer);
+
+        try(PreparedStatement statement=connection.prepareStatement("DELETE FROM trips where id_trip = ?;")){
+            statement.setLong(1,integer);
+            int rowsAffected= statement.executeUpdate();
+            if (rowsAffected>0)
+            {
+                var result=this.findOne(integer);
+                logger.traceExit("trip deleted successfully");
+                return Optional.of(result.get());
+            }
+        }
+        catch (SQLException e)
+        {
+            logger.error(e);
+            System.out.println("Error db "+ e);
+        }
+        logger.traceExit("No trip was saved");
+        return Optional.empty();    }
 
     @Override
     public int size() {

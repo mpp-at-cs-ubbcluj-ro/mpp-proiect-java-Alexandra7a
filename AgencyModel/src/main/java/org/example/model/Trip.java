@@ -17,6 +17,9 @@ public class Trip extends Entitate {
         this.price = price;
         this.totalSeats = totalSeats;
     }
+public Trip() {
+
+    }
 
     public String getPlace() {
         return place;
