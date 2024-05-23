@@ -8,10 +8,7 @@ import org.example.model.Trip;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -95,38 +92,43 @@ public class TripDBRepository implements TripRepository {
         return trips;
     }
 
-
     @Override
     public Optional<Trip> save(Trip entity) {
-        logger.traceEntry("Save trip:  {}",entity);
-        try(PreparedStatement statement=connection.prepareStatement("insert into trips (place, transportCompanyName, departure, price, totalSeats)\n" +
-                "VALUES (?,?,?,?,?) Statement.RETURN_GENERATED_KEYS")){
-            statement.setString(1,entity.getPlace());
-            statement.setString(2,entity.getTransportCompanyName());
-            statement.setString(3,entity.getDeparture().toString());
-            statement.setFloat(4,entity.getPrice());
-            statement.setInt(5,entity.getTotalSeats());
-            ResultSet resultSet= statement.executeQuery();
+        logger.traceEntry("Save trip: {}", entity);
+        try (PreparedStatement statement = connection.prepareStatement(
+                "INSERT INTO trips (place, transportCompanyName, departure, price, totalSeats)" +
+                        " VALUES (?, ?, ?, ?, ?)")) {
+            statement.setString(1, entity.getPlace());
+            statement.setString(2, entity.getTransportCompanyName());
+            statement.setString(3, entity.getDeparture().toString().replace('T',' '));
+            statement.setFloat(4, entity.getPrice());
+            statement.setInt(5, entity.getTotalSeats());
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {
-                ResultSet generatedKeys = statement.getGeneratedKeys();
-                if (generatedKeys.next()) {
-                    long id = generatedKeys.getLong(1);
-                    entity.setId(id);
-                    logger.traceExit("Trip saved successfully");
-                    return Optional.of(entity);
+
+                try(PreparedStatement statement1=connection.prepareStatement("select id_trip from trips order by id_trip desc limit 1;")){
+                    ResultSet resultSet=statement1.executeQuery();
+                    if(resultSet.next()){
+                        long id = resultSet.getLong(1);
+                        entity.setId(id);
+                        logger.traceExit("Trip saved successfully");
+                        return Optional.of(entity);
+                    }
+                }
+                catch (Exception e){
+                    logger.error("Error retrieving last id", e.getMessage());
+                    e.printStackTrace();
                 }
             }
-        }
-        catch (SQLException e)
-        {
-            logger.error(e);
-            System.out.println("Error db "+ e);
+        } catch (SQLException e) {
+            logger.error("Error saving trip: {}", e.getMessage());
+            e.printStackTrace();
         }
         logger.traceExit("No trip was saved");
         return Optional.empty();
     }
+
 
     @Override
     public Optional<Trip> update(Long integer, Trip entity) {
@@ -142,7 +144,7 @@ public class TripDBRepository implements TripRepository {
                 "    id_trip = ?;\n")){
             statement.setString(1,entity.getPlace());
             statement.setString(2,entity.getTransportCompanyName());
-            statement.setString(3,entity.getDeparture().toString());
+            statement.setString(3,entity.getDeparture().toString().replace('T',' '));
             statement.setFloat(4,entity.getPrice());
             statement.setInt(5,entity.getTotalSeats());
             statement.setLong(6,integer);
@@ -174,7 +176,7 @@ public class TripDBRepository implements TripRepository {
             {
                 var result=this.findOne(integer);
                 logger.traceExit("trip deleted successfully");
-                return Optional.of(result.get());
+                return result;
             }
         }
         catch (SQLException e)
