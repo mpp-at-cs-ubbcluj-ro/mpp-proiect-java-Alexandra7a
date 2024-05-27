@@ -1,1 +1,1 @@
-hibernate adaugat pentru entitatea Employee
+react client
