@@ -1,0 +1,21 @@
+button,input[type="submit"],
+input[type="reset"]{
+    border-radius: 4px;
+    background-color: #689a64;
+    color:white;
+    padding: 7px;
+    margin:5px;
+    cursor: pointer;
+}
+
+
+body{
+   display: flex;
+    justify-content: center;
+    font-family: "Roboto Light", serif;
+}
+.TripApp{
+    /*background-color: rgba(246, 234, 130, 0.56);*/
+    padding: 20px 80px;
+
+}

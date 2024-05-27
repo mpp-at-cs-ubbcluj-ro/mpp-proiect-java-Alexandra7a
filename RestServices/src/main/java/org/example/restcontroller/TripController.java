@@ -24,6 +24,13 @@ public class TripController {
     public  String greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return String.format(template, name);
     }
+    /**
+     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+     *     public Iterable<Trip> getAll(@PathVariable Long page){
+      *     //to get a page from repo and display them paging manner
+     *         return tripRepository.findAll(page);
+     *     }
+     * */
     @RequestMapping(method = RequestMethod.GET)
     public Iterable<Trip> getAll(){
         return tripRepository.findAll();

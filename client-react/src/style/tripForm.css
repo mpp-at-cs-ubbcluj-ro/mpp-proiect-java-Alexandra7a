@@ -1,0 +1,17 @@
+
+form{
+    border-collapse: collapse;
+}
+
+form input[type='text'], form input[type='password'], form input[type='email'], form input[type='datetime-local'], form input[type='date'], form input[type='number'] {
+    border: 2px solid chocolate;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 2px;
+}
+form input:disabled{
+    background-color: rgb(238, 236, 236);
+
+}

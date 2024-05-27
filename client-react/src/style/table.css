@@ -1,0 +1,19 @@
+.trip-table{
+    border-collapse: collapse;
+    border-radius: 5px;
+
+}
+.trip-table tr,td,th{
+    border: 2px solid #689a64;
+}
+.trip-table tbody tr{
+    cursor: pointer;
+}
+
+.trip-table tbody tr:hover{
+    background-color: rgba(104, 154, 100, 0.36);
+}
+.container-table{
+    color: chocolate;
+
+}
